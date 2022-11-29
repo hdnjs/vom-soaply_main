@@ -10,12 +10,19 @@
     <link rel="shortcut icon" href="images/favicon.png" />
     <link rel="apple-touch-icon" href="images/favicon.png" />
 
+    <!-- Remix Icon Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
     <!-- Main Style Sheet Link -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
   </head>
   <body>
     <div class="wrapper">
-      <div id="header" class="header">
+      <header id="header" class="header">
         <div class="container">
           <nav class="nav-wrpper">
             <ul class="nav-lists">
@@ -28,22 +35,88 @@
           <div class="logo">
             <a href="#"><img src="images/logo.svg" alt="" /> </a>
           </div>
-          <ul class="sns">
-            <li>
-              <a href="#"><img src="images/sns-icon-1.svg" alt="" /></a>
+
+          <ul class="info">
+            <li class="sns">
+              <ul>
+                <li>
+                  <a href="#"><img src="images/sns-icon-1.svg" alt="" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/sns-icon-2.svg" alt="" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/sns-icon-3.svg" alt="" /></a>
+                </li>
+              </ul>
             </li>
-            <li>
-              <a href="#"><img src="images/sns-icon-2.svg" alt="" /></a>
+
+            <li class="cart">
+              <a href="#">
+                <i class="ri-shopping-cart-line"></i>
+                <em>(0)</em>
+              </a>
             </li>
-            <li>
-              <a href="#"><img src="images/sns-icon-3.svg" alt="" /></a>
+
+            <li class="user">
+              <button>
+                <i class="ri-user-3-fill"></i>
+              </button>
             </li>
           </ul>
+
+          <div class="mobile-btn-wrapper">
+            <div class="mobile-btn not-active">
+              <span class="bar_line"></span>
+              <span class="bar_line"></span>
+              <span class="bar_line"></span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div id="main-section" class="section landing-section">
+
+        <!-- Mobile Menu Element -->
+        <div class="mobile-menus"></div>
+      </header>
+
+      <section id="main-section" class="section landing-section">
         <img src="images/landing-image.jpeg" alt="" />
-      </div>
+        <div class="landing-text-box container">
+          <h1>소플리 컬렉션<br />자연을 담은 수제 천연 비누</h1>
+          <p>
+            이에제마은을 신어서사는 밀훵아는 딜수는 궁깄브다 싱히디승은
+            패다게즙은 번추베후의 크말래텨삭앰은 뫼라읏나스다 혀으가
+          </p>
+          <a href="#" class="common-btn">Shop Now</a>
+        </div>
+        <div class="overlay"></div>
+      </section>
+
+      <!-- Meet Section -->
+      <section class="meet-section section">
+        <div class="container">
+          <div class="meet-wrapper">
+            <div class="meet-text-box">
+              <h4>MEET THE SOAPLY MASTER</h4>
+              <p>
+                앗꾸어아를 누이빌뻐로 이하에 바다어은도 앴둈이고 녀겐과.
+                씄증눈부먀커 가힉뷕이, 마압 바러골세융셔엡은 스닸웅갱드억을
+                든올가혈은 마날와어 솬로죠. 온탐나돈카나아 대멀 사니싕가머니듯이
+                뷜갑물부는 게마를 슴간에가다
+              </p>
+              <span>윤동주, '별 헤는 밤' 중</span>
+            </div>
+            <div class="meet-image-box">
+              <div class="meet-left-image">
+                <img src="images/about-image-1.jpeg" alt="" />
+                <img src="images/about-image-3.jpeg" alt="" />
+              </div>
+              <div class="meet-right-image">
+                <img src="images/about-image-2.jpeg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
 
     <!-- Scroll Reveal Plugin -->

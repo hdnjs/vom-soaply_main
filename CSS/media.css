@@ -1,0 +1,105 @@
+@media screen and (max-width: 980px) {
+  /* Header Style */
+  header {
+    background: #fff;
+    border-bottom: 1px solid var(--color-gray-d);
+  }
+
+  header .container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header .container > *:not(.logo, .mobile-btn-wrapper) {
+    display: none;
+  }
+
+  header .logo {
+    justify-content: flex-start;
+  }
+
+  header .mobile-menus {
+    display: block;
+    position: absolute;
+    top: 101%;
+    width: var(--ls-full);
+    background: #fff;
+    left: 0;
+    box-shadow: 0 1px 3px var(--color-gray-d);
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+
+  header .mobile-menus .nav-lists {
+    display: block;
+  }
+
+  header .mobile-menus .nav-lists li {
+    text-align: center;
+    padding: 0;
+  }
+
+  header .mobile-menus .nav-lists li a {
+    display: block;
+    width: 100%;
+    font-size: var(--fs-16);
+    padding: var(--el-medium) 0;
+    border-bottom: 1px solid var(--color-gray-d);
+  }
+
+  header .mobile-menus .info {
+    display: flex;
+    justify-content: center;
+  }
+
+  header .mobile-btn {
+    display: block;
+  }
+
+  header .mobile-btn-wrapper {
+    justify-content: flex-end;
+  }
+
+  /* Landing Section Style */
+  /* https://developer.mozilla.org/ko/docs/Web/CSS/filter */
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.4;
+  }
+
+  .landing-text-box h1 {
+    text-shadow: 1px 1px 1px var(--color-gray-2);
+  }
+
+  header .landing-text-box p {
+    width: var(--ls-1-2);
+  }
+}
+
+@media screen and (max-width: 786px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .landing-text-box {
+    text-align: center;
+  }
+
+  .landing-text-box h1 {
+    font-size: 1.8rem;
+  }
+
+  .landing-text-box p {
+    width: 80%;
+    margin: auto;
+  }
+
+  .overlay {
+    opacity: 0.7;
+  }
+}
