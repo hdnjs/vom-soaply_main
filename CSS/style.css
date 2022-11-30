@@ -45,6 +45,7 @@
   --el-normal: 0.75rem;
   --el-medium: 1.25rem;
   --el-wide: 2.5rem;
+  --el-section-small: 3rem;
 }
 
 /* ========== Reset Style ========== */
@@ -86,6 +87,7 @@ button {
   border-radius: 0;
 }
 
+/* ========== Common Style ========== */
 .wrapper {
   width: var(--ls-full);
   height: auto;
@@ -104,6 +106,22 @@ button {
   width: var(--ls-full);
   height: auto;
   padding: var(--el-section) 0;
+}
+
+/* ========== Common Button Style ========== */
+
+.common-btn {
+  background: var(--color-black);
+  color: #fff;
+  padding: var(--el-small) var(--el-medium);
+  border-radius: 0.25rem;
+  font-size: var(--fs-14);
+  width: fit-content;
+  /* 내부에 있는 content 너비에 맞춰서 조정 */
+}
+
+.common-btn:hover {
+  background: var(--color-gray-3);
 }
 
 /* ========== Landing Style ========== */
@@ -139,18 +157,6 @@ button {
 .landing-text-box p {
   padding: var(--el-medium) 0;
   width: var(--ls-1-3);
-}
-
-.common-btn {
-  background: var(--color-black);
-  color: #fff;
-  padding: var(--el-small) var(--el-medium);
-  border-radius: 0.25rem;
-  font-size: var(--fs-14);
-}
-
-.common-btn:hover {
-  background: var(--color-gray-3);
 }
 
 /* ========== Header Style ========== */
@@ -398,13 +404,192 @@ span.bar_line:nth-child(2) {
   width: var(--ls-1-2);
 }
 
+.meet-section .meet-text-box h4 {
+  font-size: var(--fs-12);
+  font-weight: var(--fw-400);
+}
+
+.meet-section .meet-text-box p {
+  font-size: var(--fs-18);
+  line-height: 1.8;
+  width: 80%;
+  padding: var(--el-wide) 0 var(--el-medium);
+  position: relative;
+}
+
+.meet-section .meet-text-box p::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: var(--color-black);
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.meet-section span {
+  font-size: var(--fs-18);
+  padding-top: var(--el-medium);
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.meet-section span::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: var(--color-black);
+  display: block;
+}
+
 .meet-section .meet-image-box {
   width: var(--ls-1-2);
   display: flex;
   align-items: center;
+  column-gap: var(--el-medium);
+}
+
+.meet-section .meet-left-image {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  row-gap: var(--el-medium);
+  width: var(--ls-1-2);
+}
+
+.meet-section .meet-right-image {
+  width: var(--ls-1-2);
 }
 
 .meet-section .meet-image-box img {
   width: var(--ls-full);
   border-radius: 0.25rem;
+}
+
+.meet-section .meet-image-box img:nth-child(2) {
+  width: 80%;
+}
+
+/* ========== Features Section Style ========== */
+.features-section.section {
+  padding: var(--el-section-small) 0;
+}
+
+.features-section .features {
+  width: var(--ls-full);
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.features-section .feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: var(--ls-1-3);
+  padding: var(--el-wide);
+}
+
+.features-section .feature h4 {
+  font-size: var(--fs-name);
+  font-weight: var(--fw-400);
+  padding: var(--el-medium) 0;
+}
+
+.features-section .feature p {
+  font-size: var(--fs-small-text);
+  text-align: center;
+}
+
+/* ========== Swiper Slide Style ========== */
+.slider-section .container {
+  position: relative;
+}
+
+.slider-section .swiper-slide {
+  width: var(--ls-full);
+  display: flex;
+}
+
+.slider-section .swiper-slide > div {
+  width: var(--ls-1-2);
+  padding: 0 var(--el-medium);
+}
+.slider-section .swiper-slide > div > img {
+  width: var(--ls-full);
+  border-radius: 0.25rem;
+}
+
+.slider-section .slider-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: var(--el-medium);
+}
+
+.slider-section .swiper-slide.swiper-slide-active .slider-text {
+  animation: show-up 0.5s 1;
+  transform: translateY(40px);
+  animation-fill-mode: forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+@keyframes show-up {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slider-section .slider-text h4 {
+  font-size: 1.8rem;
+  font-weight: var(--fw-400);
+}
+
+.slider-section .slider-text p {
+  font-size: var(--fs-small-text);
+  width: 90%;
+}
+
+.slider-section .slider-nav {
+  background: #fff;
+  color: var(--color-black);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px var(--color-gray-3);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1.5rem;
+}
+
+.swiper-button-next::after {
+  left: 1.5rem;
+}
+.swiper-button-prev::after {
+  right: 1.5rem;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -2.25em;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-black);
 }
