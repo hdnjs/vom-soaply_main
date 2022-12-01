@@ -26,7 +26,7 @@
   --fs-16: 1rem;
   --fs-18: 1.125rem;
   --fs-20: 1.25rem;
-  --fs-title: 2.5rem;
+  --fs-title: 1.3rem;
   --fs-button: 0.875rem;
   --fs-name: 1.25rem;
   --fs-small-text: 0.875rem;
@@ -108,6 +108,21 @@ button {
   padding: var(--el-section) 0;
 }
 
+.title-box {
+  width: var(--ls-full);
+  border-bottom: 1px solid var(--color-gray-3);
+  display: flex;
+  justify-content: space-between;
+  padding: var(--el-normal) 0;
+  align-items: center;
+  margin-bottom: var(--el-medium);
+}
+
+.section-title {
+  font-size: var(--fs-title);
+  font-weight: var(--fw-400);
+}
+
 /* ========== Common Button Style ========== */
 
 .common-btn {
@@ -118,6 +133,7 @@ button {
   font-size: var(--fs-14);
   width: fit-content;
   /* 내부에 있는 content 너비에 맞춰서 조정 */
+  display: inline-block;
 }
 
 .common-btn:hover {
@@ -592,4 +608,120 @@ span.bar_line:nth-child(2) {
 
 .swiper-pagination-bullet-active {
   background: var(--color-black);
+}
+
+/* ========== Special Section Style_example.html ========== */
+/* .special-offers.section {
+  padding: var(--el-section-small) 0;
+}
+
+.special-offers .container {
+  width: var(--ls-full);
+  height: auto;
+}
+
+.special-offers h2 {
+  text-align: center;
+  font-size: var(--fs-title);
+  font-weight: var(--fw-200);
+}
+
+.special-offers .products {
+  width: var(--ls-full);
+}
+
+.special-offers .product-frame {
+  display: flex;
+}
+
+.special-offers .product-item {
+  width: var(--ls-1-3);
+  padding: var(--el-wide);
+}
+
+.special-offers .product-item img {
+  width: var(--ls-full);
+}
+
+.special-offers .product-text {
+  text-align: center;
+}
+
+.special-offers .product-text h4 {
+  font-size: var(--fs-name);
+  font-weight: var(--fw-400);
+  padding: var(--el-medium) 0;
+}
+
+.special-offers .product-text p {
+  font-size: var(--fs-small-text);
+  text-align: center;
+  padding: var(--el-medium) 0;
+} */
+
+/* ========== Special Section Style_index.html ========== */
+.offers-section .products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.offers-section .product-frame {
+  width: var(--ls-1-3);
+  padding: var(--el-medium);
+}
+
+.offers-section .product-frame img {
+  width: var(--ls-full);
+  border-radius: 0.25rem;
+}
+
+.offers-section .product-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--el-normal);
+  align-items: center;
+  margin-top: var(--el-normal);
+}
+
+.offers-section .product-text h4 {
+  font-size: var(--fs-name);
+  font-weight: var(--fw-400);
+}
+
+.offers-section .product-text strong {
+  font-size: var(--fs-18);
+}
+
+.offers-section .product-text p {
+  font-size: var(--fs-small-text);
+  padding: var(--el-medium);
+}
+
+/* ========== Review Style ========== */
+.review-section {
+  background: url(/images/review-background.jpeg) no-repeat center center;
+  background-size: cover;
+}
+
+.review-section .reviews {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.review-section .review-frame {
+  width: var(--ls-1-3);
+  padding: var(--el-medium);
+}
+
+.review-section .review-item {
+  background: #fff;
+  padding: var(--el-wide);
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.review-section .review-item p {
+  font-size: var(--fs-small-text);
+  margin-bottom: var(--el-medium);
 }
