@@ -724,4 +724,143 @@ span.bar_line:nth-child(2) {
 .review-section .review-item p {
   font-size: var(--fs-small-text);
   margin-bottom: var(--el-medium);
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  /* 말줄임 line-clamp */
+}
+
+.review-section .review-writer {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--el-small);
+  align-items: center;
+}
+
+.review-section .review-writer img {
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.review-section .review-writer h4 {
+  font-size: var(--fs-name);
+  font-weight: var(--fw-400);
+}
+
+.review-section .review-writer em {
+  font-style: normal;
+  font-size: var(--fs-small-text);
+}
+
+/* ========== Gallery Style ========== */
+.gallery-section .gallery-wrapper {
+  width: var(--ls-full);
+  height: auto;
+  max-height: 1000px;
+  overflow: hidden;
+}
+
+.gallery-section .grid-item {
+  width: var(--ls-1-3);
+  padding: var(--el-small);
+}
+
+.gallery-section .grid-item img {
+  width: var(--ls-full);
+  border-radius: 0.25rem;
+}
+
+/* ========== Insta Style_self ========== */
+/* .insta-section .insta-frame {
+  width: var(--ls-full);
+  height: auto;
+  display: flex;
+}
+
+.insta-section .insta-item {
+  width: var(--ls-1-3);
+  padding: var(--el-small);
+}
+
+.insta-section .insta-image {
+  width: var(--ls-full);
+  display: flex;
+}
+
+.insta-section .insta-left {
+  width: var(--ls-1-2);
+  padding: var(--el-small);
+}
+
+.insta-section .insta-right {
+  width: var(--ls-1-2);
+  padding: var(--el-small);
+}
+
+.insta-section .insta-item img {
+  width: var(--ls-full);
+  border-radius: 0.25rem;
+}
+
+.insta-frame .insta-text {
+  text-align: center;
+  padding: var(--el-medium);
+}
+
+.insta-section .insta-text h4 {
+  font-size: var(--fs-title);
+  font-weight: var(--fw-400);
+}
+
+.insta-section .insta-sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.insta-section .insta-sub i {
+  padding-right: 0.25rem;
+} */
+
+/* ========== Insta Style ========== */
+.insta-section .insta-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* .insta-section .insta-wrapper > div {
+  width: var(--ls-1-2);
+} */
+
+.insta-section .insta-image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.insta-section .insta-image > div {
+  width: calc(var(--ls-1-2) - 0.25rem);
+}
+
+.insta-section .insta-image img {
+  width: var(--ls-full);
+  border-radius: 0.25rem;
+}
+
+.insta-section .insta-left-image .insta-grid-1 {
+  display: flex;
+  align-items: center;
+}
+
+.insta-section .insta-grid-2 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.insta-section .insta-right-image .insta-grid-1 {
+  display: flex;
+  align-items: flex-end;
 }

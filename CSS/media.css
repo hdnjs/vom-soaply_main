@@ -113,6 +113,19 @@
   .offers-section .product-frame {
     padding: var(--el-normal);
   }
+
+  /* Review Section Style */
+  .review-section .review-frame {
+    padding: var(--el-normal);
+  }
+
+  .review-section .revie-item {
+    padding: var(--el-medium);
+  }
+
+  .review-section .revie-item p {
+    -webkit-line-clamp: 3;
+  }
 }
 
 @media screen and (max-width: 786px) {
@@ -183,6 +196,11 @@
   .offers-section .product-frame {
     width: var(--ls-1-2);
   }
+
+  /* Review Section Style */
+  .review-section .review-frame {
+    width: var(--ls-1-2);
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -238,5 +256,16 @@
   /* Product Section Style */
   .offers-section .product-frame {
     width: var(--ls-full);
+  }
+
+  /* Review Section Style */
+  .review-section .review-frame {
+    width: var(--ls-full);
+  }
+
+  /* Gallery Section Style */
+  .gallery-section .grid-item {
+    width: var(--ls-1-2);
+    padding: 0.25rem;
   }
 }
