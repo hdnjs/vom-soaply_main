@@ -69,6 +69,15 @@ const getData = async () => {
 
 getData();
 
+/* ========== Fit Insta Image Height ========== */
+const instaImgHeight = document.querySelector("#h").scrollHeight;
+document.querySelector("#fh").style.height = instaImgHeight + "px";
+
+window.addEventListener("resize", () => {
+  const instaImgHeight = document.querySelector("#h").scrollHeight;
+  document.querySelector("#fh").style.height = instaImgHeight + "px";
+});
+
 /* ========== Scroll reveal Effect ========== */
 const sr = ScrollReveal({
   reset: false,
