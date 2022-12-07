@@ -219,6 +219,11 @@
   .insta-section .insta-wrapper {
     grid-template-columns: 1fr 1fr;
   }
+
+  /* Sign Up Page Style */
+  .sign .sign-box {
+    width: 75vw;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -324,5 +329,18 @@
     flex-direction: column;
     row-gap: var(--el-normal);
     align-items: center;
+  }
+
+  /* Sign Up Page Style */
+  .sign .sign-box {
+    width: 95vw;
+  }
+
+  .sign p input:not(input[type="submit"]) {
+    padding: var(--el-normal);
+  }
+
+  .sign p.send-btn input {
+    padding: var(--el-normal);
   }
 }
