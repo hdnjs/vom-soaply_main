@@ -41,7 +41,7 @@ window.addEventListener("scroll", stickyHeader);
 const productsBox = document.querySelector(".products");
 
 const getData = async () => {
-  await fetch("/data/products.json")
+  await fetch("/main_project/data/products.json")
     .then((response) => response.json())
     .then((data) => {
       let dataEl;
@@ -49,7 +49,7 @@ const getData = async () => {
         dataEl = `
               <div class="product-frame">
                 <div class="product-item">
-                  <img src="${item.prodPath}" alt="" />
+                  <img src="/main_project/${item.prodPath}" alt="" />
                   <div class="product-text">
                     <h4>${item.prodTit}</h4>
                     <strong>${item.prodPri}</strong>
