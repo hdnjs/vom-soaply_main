@@ -5,6 +5,10 @@ const emailInput = document.querySelector(".email");
 const pwdInput = document.querySelector(".pwd");
 const rpwdInput = document.querySelector(".rpwd");
 
+// http response code 참조: https://www.whatap.io/ko/blog/40/
+
+let status;
+
 signup.addEventListener("click", () => {
   //  입력창 작성 체크
   if (!nameInput.value) {
@@ -48,8 +52,21 @@ signup.addEventListener("click", () => {
 
   //    formdata 참조: https://ko.javascript.info/formdata
   const formData = new FormData(document.querySelector("form"));
-  fetch("/main_backend/model.php", {
+  fetch("/main_backend/model/register.php", {
     method: "POST",
     body: formData,
-  });
+  })
+    .then((res) => {
+      console.log(res);
+      status = res.status;
+      return res.json();
+    })
+    .then((data) => {
+      // console.log(data);
+      alert(data.msg);
+      location.href = "/main_project/index.html";
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
