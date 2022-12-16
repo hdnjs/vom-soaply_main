@@ -5,8 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign In || Soaply</title>
+
+    <!-- Favicon Link -->
+    <link rel="shortcut icon" href="/main_project/images/favicon.png" />
+    <link rel="apple-touch-icon" href="/main_project/images/favicon.png" />
+
+    <!-- Remix Icon Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main Style Sheet Link -->
+    <link rel="stylesheet" href="/main_project/css/normalize.css" />
+    <link rel="stylesheet" href="/main_project/css/header-footer.css" />
+    <link rel="stylesheet" href="/main_project/css/sign.css" />
+    <link rel="stylesheet" href="/main_project/css/media.css" />
   </head>
   <body>
-    sign in page
+    <div class="wrapper sign">
+      <!-- Header Include -->
+      <div
+        class="header-wrapper"
+        w3-include-html="/main_project/include/header.html"
+      ></div>
+
+      <!-- Sign In Form Field Section -->
+      <div class="sign-box">
+        <h2 class="sign-title">SIGN IN</h2>
+        <form onsubmit="return false;">
+          <!-- <form action="/main_backend/model/register.php" method="POST"> -->
+          <p><input type="text" placeholder="아이디" name="id" class="id" /></p>
+          <p>
+            <input
+              type="password"
+              placeholder="비밀번호"
+              name="pwd"
+              class="pwd"
+            />
+          </p>
+
+          <p class="send-btn"><input type="submit" value="로그인하기" /></p>
+          <input type="hidden" value="signin" name="req_sign" />
+          <span class="sign-line"></span>
+
+          <strong id="so">sign out</strong>
+          <p class="sign-msg">
+            아직 회원이 아니세요? |
+            <a href="/main_project/pages/sign-up.html">회원가입 하기</a>
+          </p>
+        </form>
+      </div>
+
+      <!-- Footer Include -->
+      <div
+        class="footer-wrapper"
+        w3-include-html="/main_project/include/footer.html"
+      ></div>
+    </div>
+
+    <!-- Main Javascript -->
+    <script src="/main_project/JS/header.js"></script>
+    <script src="/main_project/JS/signin.js"></script>
+    <script src="/main_project/JS/loginResponse.js"></script>
+
+    <!-- Include Files -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="/main_project/JS/include.js"></script>
   </body>
 </html>

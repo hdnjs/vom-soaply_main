@@ -1,4 +1,10 @@
 /* ========== Header Style ========== */
+.header-wrapper,
+.footer-wrapper {
+  width: 100%;
+  height: auto;
+}
+
 header {
   position: fixed;
   width: var(--ls-full);

@@ -19,127 +19,69 @@
     <!-- Main Style Sheet Link -->
     <link rel="stylesheet" href="/main_project/css/normalize.css" />
     <link rel="stylesheet" href="/main_project/css/header-footer.css" />
-    <link rel="stylesheet" href="/main_project/css/sign.css">
+    <link rel="stylesheet" href="/main_project/css/sign.css" />
     <link rel="stylesheet" href="/main_project/css/media.css" />
   </head>
 
   <body>
     <div class="wrapper sign">
+      <!-- Header Include -->
+      <div
+        class="header-wrapper"
+        w3-include-html="/main_project/include/header.html"
+      ></div>
 
-      <!-- Header -->
-      <header id="header" class="header">
-        <div class="container">
-          <nav class="nav-wrpper">
-            <ul class="nav-lists">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Shop</a></li>
-              <li><a href="#">Reviews</a></li>
-              <li><a href="#">Gallery</a></li>
-            </ul>
-          </nav>
-          <div class="logo">
-            <a href="/main_project/index.html"
-              ><img src="/main_project/images/logo.svg" alt="" />
-            </a>
-          </div>
-
-          <ul class="info">
-            <li class="sns">
-              <ul>
-                <li>
-                  <a href="#"
-                    ><img src="/main_project/images/sns-icon-1.svg" alt=""
-                  /></a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="/main_project/images/sns-icon-2.svg" alt=""
-                  /></a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img src="/main_project/images/sns-icon-3.svg" alt=""
-                  /></a>
-                </li>
-              </ul>
-            </li>
-
-            <li class="cart">
-              <a href="#">
-                <i class="ri-shopping-cart-line"></i>
-                <em>(0)</em>
-              </a>
-            </li>
-
-            <li class="user">
-              <a href="/main_project/pages/sign-up.html">
-                <i class="ri-user-3-fill"></i>
-              </a>
-            </li>
-          </ul>
-
-          <div class="mobile-btn-wrapper">
-            <div class="mobile-btn not-active">
-              <span class="bar_line"></span>
-              <span class="bar_line"></span>
-              <span class="bar_line"></span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Mobile Menu Element -->
-        <div class="mobile-menus"></div>
-      </header>
-
-      <!-- Sign up Form Field Section -->
+      <!-- Sign Up Form Field Section -->
       <div class="sign-box">
         <h2 class="sign-title">SIGN UP</h2>
         <form onsubmit="return false;">
-          <p><input type="text" placeholder="이름" name="name" class="name"></p>
-          <p><input type="text" placeholder="아이디" name="id" class="id"></p>
-          <p><input type="email" placeholder="이메일" name="email" class="email"></p>
-          <p><input type="password" placeholder="비밀번호" name="pwd" class="pwd"></p>
-          <p><input type="password" placeholder="비밀번호 확인" class="rpwd"></p>
-          <p class="send-btn"><input type="submit" value="회원가입하기"></p>
-          <input type="hidden" value="signup" name="req_sign">
+          <p>
+            <input type="text" placeholder="이름" name="name" class="name" />
+          </p>
+          <p><input type="text" placeholder="아이디" name="id" class="id" /></p>
+          <p>
+            <input
+              type="email"
+              placeholder="이메일"
+              name="email"
+              class="email"
+            />
+          </p>
+          <p>
+            <input
+              type="password"
+              placeholder="비밀번호"
+              name="pwd"
+              class="pwd"
+            />
+          </p>
+          <p>
+            <input type="password" placeholder="비밀번호 확인" class="rpwd" />
+          </p>
+          <p class="send-btn"><input type="submit" value="회원가입하기" /></p>
+          <input type="hidden" value="signup" name="req_sign" />
           <span class="sign-line"></span>
-          <p class="sign-msg">이미 회원이세요? | <a href="/main_project/pages/sign-in.html">로그인하기</a></p>
+          <p class="sign-msg">
+            이미 회원이세요? |
+            <a href="/main_project/pages/sign-in.html">로그인하기</a>
+          </p>
         </form>
       </div>
 
-      <!-- Footer Section -->
-      <footer>
-        <div class="container">
-          <div class="footer-upper">
-            <div class="footer-logo">
-              <a href=""><img src="/main_project/images/logo.svg" alt="" /></a>
-            </div>
-
-            <div class="footer-info">
-              <ul class="footer-nav">
-                <li><a href="">ChangeLog</a></li>
-                <li><a href="">Licencing</a></li>
-                <li><a href="">Style Guide</a></li>
-              </ul>
-
-              <ul class="footer-sns">
-                <li><a href=""><img src="/main_project/images/sns-icon-1.svg" alt=""></a></li>
-                <li><a href=""><img src="/main_project/images/sns-icon-2.svg" alt=""></a></li>
-                <li><a href=""><img src="/main_project/images/sns-icon-3.svg" alt=""></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer-line"></div>
-          <div class="footer-lower">
-            <span class="footer-copy">&copy; Copyright 2022</span>
-            <span class="byline">Powered by <a href="">Swiss</a> - Developed By Swiss</span>
-          </div>
-      </footer>
+      <!-- Footer Include -->
+      <div
+        class="footer-wrapper"
+        w3-include-html="/main_project/include/footer.html"
+      ></div>
     </div>
 
     <!-- Main Javascript -->
-    
+
     <script src="/main_project/JS/header.js"></script>
     <script src="/main_project/JS/signup.js"></script>
+
+    <!-- Include Files -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="/main_project/JS/include.js"></script>
   </body>
 </html>
