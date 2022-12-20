@@ -1,0 +1,46 @@
+.admin-wrapper {
+  position: static;
+  width: var(--ls-full);
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: auto;
+}
+
+.admin-wrapper header {
+  position: relative;
+  border-bottom: 1px solid var(--color-gray-d);
+}
+
+.admin-wrapper .admin-box {
+  width: 100%;
+  height: auto;
+}
+
+.admin-wrapper .admin-btns {
+  width: 100%;
+  height: auto;
+  display: flex;
+  column-gap: 5rem;
+  justify-content: center;
+  padding: var(--el-medium) 0;
+  border-bottom: 1px solid var(--color-gray-d);
+}
+
+.admin-wrapper .admin-btns button {
+  font-size: var(--fs-16);
+  border: 1px solid var(--color-black);
+  padding: var(--el-normal) var(--el-wide);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.admin-wrapper .admin-btns button:hover,
+.admin-wrapper .admin-btns button.active {
+  background: var(--color-black);
+  color: #fff;
+}

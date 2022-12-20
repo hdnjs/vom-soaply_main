@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign In || Soaply</title>
+    <title>Admin || Soaply</title>
 
     <!-- Favicon Link -->
     <link rel="shortcut icon" href="/main_project/images/favicon.png" />
@@ -19,41 +19,29 @@
     <!-- Main Style Sheet Link -->
     <link rel="stylesheet" href="/main_project/css/normalize.css" />
     <link rel="stylesheet" href="/main_project/css/header-footer.css" />
-    <link rel="stylesheet" href="/main_project/css/sign.css" />
+    <link rel="stylesheet" href="/main_project/css/admin.css" />
     <link rel="stylesheet" href="/main_project/css/media.css" />
   </head>
   <body>
-    <div class="wrapper sign">
+    <div class="wrapper admin-wrapper">
       <!-- Header Include -->
       <div
         class="header-wrapper"
         w3-include-html="/main_project/include/header.html"
       ></div>
 
-      <!-- Sign In Form Field Section -->
-      <div class="sign-box">
-        <h2 class="sign-title">SIGN IN</h2>
-        <form onsubmit="return false;">
-          <!-- <form action="/main_backend/model/register.php" method="POST"> -->
-          <p><input type="text" placeholder="아이디" name="id" class="id" /></p>
-          <p>
-            <input
-              type="password"
-              placeholder="비밀번호"
-              name="pwd"
-              class="pwd"
-            />
-          </p>
+      <div class="admin-box">
+        <div class="container">
+          <div class="admin-btns">
+            <button class="active">제품입력</button>
+            <button>회원관리</button>
+          </div>
 
-          <p class="send-btn"><input type="submit" value="로그인하기" /></p>
-          <input type="hidden" value="signin" name="req_sign" />
-          <span class="sign-line"></span>
-
-          <p class="sign-msg">
-            아직 회원이 아니세요? |
-            <a href="/main_project/pages/sign-up.html">회원가입 하기</a>
-          </p>
-        </form>
+          <div class="admin-panels">
+            <div class="product-panel panel"></div>
+            <div class="user-panel panel"></div>
+          </div>
+        </div>
       </div>
 
       <!-- Footer Include -->
@@ -69,7 +57,6 @@
 
     <!-- Main Javascript -->
     <script src="/main_project/JS/header.js"></script>
-    <script src="/main_project/JS/signin.js"></script>
     <script src="/main_project/JS/loginResponse.js"></script>
   </body>
 </html>

@@ -11,7 +11,6 @@ $(function () {
   //   });
 
   const gridBox = $(".grid");
-  console.log(gridBox);
 
   const getGalleryData = (data) => {
     let items = [];
