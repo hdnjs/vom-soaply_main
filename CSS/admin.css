@@ -44,3 +44,117 @@
   background: var(--color-black);
   color: #fff;
 }
+
+/* Product Panel Style */
+.admin-wrapper .admin-panels {
+  width: 100%;
+  height: auto;
+  margin-top: var(--el-medium);
+}
+
+.admin-wrapper .panel {
+  width: 100%;
+  height: auto;
+  display: flex;
+  column-gap: 0.25rem;
+  border: 1px solid var(--color-gray-d);
+  padding: 0.25rem;
+}
+
+.admin-wrapper .panel:nth-child(2) {
+  display: none;
+}
+
+.admin-wrapper .panel > div {
+  width: var(--ls-1-2);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
+}
+
+.admin-wrapper .product-text {
+  display: flex;
+  width: 100%;
+  height: auto;
+  column-gap: 0.25rem;
+}
+
+.admin-wrapper .product-text > div {
+  width: var(--ls-1-2);
+  display: flex;
+}
+
+.admin-wrapper .product-text > div > strong {
+  width: 30%;
+  font-size: var(--fs-14);
+  font-weight: normal;
+  background: var(--color-black);
+  color: #fff;
+  text-align: center;
+  padding: var(--el-small);
+}
+
+.admin-wrapper .product-text > div > input {
+  width: 70%;
+  border: 1px solid var(--color-gray-d);
+  padding: var(--el-normal);
+}
+
+.admin-wrapper .product-desc {
+  width: 100%;
+  height: 350px;
+  border: 1px solid var(--color-gray-d);
+}
+
+.admin-wrapper .product-desc textarea {
+  resize: none;
+  width: 100%;
+  height: 100%;
+  padding: var(--el-normal);
+}
+
+.admin-wrapper div.input-control {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
+}
+
+.admin-wrapper .image-name {
+  width: 100%;
+  border: 1px solid var(--color-gray-d);
+  padding: var(--el-normal);
+}
+
+.admin-wrapper label {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: var(--fs-14);
+  color: #fff;
+  background: var(--color-black);
+  padding: var(--el-normal);
+}
+
+.admin-wrapper .upload-hidden {
+  display: none;
+}
+
+.admin-wrapper .img-selected {
+  width: 100%;
+  height: auto;
+  padding: 0.25rem;
+  overflow: hidden;
+  border: 1px solid var(--color-gray-d);
+}
+
+.admin-wrapper .img-selected img {
+  width: 100%;
+}
+
+.admin-wrapper .submit {
+  width: 100%;
+  height: auto;
+  padding: var(--el-medium) 0;
+  text-align: center;
+}

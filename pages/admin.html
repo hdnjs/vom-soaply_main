@@ -38,7 +38,62 @@
           </div>
 
           <div class="admin-panels">
-            <div class="product-panel panel"></div>
+            <form onsubmit="return false;">
+              <div class="product-panel panel">
+                <div class="product-info">
+                  <div class="product-text">
+                    <div class="product-name">
+                      <strong>제품명</strong>
+                      <input
+                        type="text"
+                        placeholder="제품명을 입력해주세요."
+                        name="product_name"
+                      />
+                    </div>
+
+                    <div class="product-price">
+                      <strong>가격</strong>
+                      <input
+                        type="text"
+                        placeholder="가격을 입력해주세요."
+                        name="product_price"
+                      />
+                    </div>
+                  </div>
+                  <!-- End of product text -->
+
+                  <div class="product-desc">
+                    <textarea
+                      placeholder="제품 정보를 입력해주세요."
+                      name="product_desc"
+                    ></textarea>
+                  </div>
+                </div>
+                <!-- End of product info -->
+
+                <div class="product-image">
+                  <div class="input-control">
+                    <input placeholder="파일명" class="image-name" />
+                    <label for="main-image">SELECT IMAGE</label>
+                    <input
+                      type="file"
+                      id="main-image"
+                      class="upload-hidden"
+                      name="img_main"
+                    />
+                  </div>
+
+                  <div class="img-selected">
+                    <img id="img" />
+                  </div>
+                </div>
+                <!-- End of product image -->
+              </div>
+              <!-- End of Product Panel -->
+              <div class="submit">
+                <input type="submit" value="입력하기" class="common-btn" />
+              </div>
+            </form>
             <div class="user-panel panel"></div>
           </div>
         </div>
@@ -55,8 +110,16 @@
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="/main_project/JS/include.js"></script>
 
+    <!-- jQuery Framework -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    ㄴ
     <!-- Main Javascript -->
     <script src="/main_project/JS/header.js"></script>
+    <script src="/main_project/JS/admin.js"></script>
     <script src="/main_project/JS/loginResponse.js"></script>
   </body>
 </html>
