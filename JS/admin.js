@@ -7,7 +7,7 @@ $(function () {
 
     if (window.FileReader) {
       filename = $(this)[0].files[0].name;
-      console.log(filename);
+      // console.log(filename);
     }
 
     $(this).siblings().val(filename);
@@ -17,7 +17,7 @@ $(function () {
 
 const imgFileSelect = (event) => {
   const input = event.target;
-  const reader = new FileReader(); //  FileReader 기능 저장
+  const reader = new FileReader(); //  FileReader 기능 저장 - 서버로 전송되는 파일의 정보를 읽음
 
   reader.onload = function () {
     const dataURL = reader.result;
