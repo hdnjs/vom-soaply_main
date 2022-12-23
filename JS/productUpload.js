@@ -11,12 +11,11 @@ submitBtn.addEventListener("click", () => {
     body: formData,
   })
     .then((res) => {
-      if (res.status === 200) {
-        return res.json();
-      }
+      return res.json();
     })
     .then((data) => {
-      console.log(data);
+      alert(data.msg);
+      location.reload();
     })
     .catch((err) => {
       console.log(err);
