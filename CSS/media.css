@@ -114,6 +114,10 @@
     padding: var(--el-normal);
   }
 
+  .offers-section .product-frame img {
+    height: 250px;
+  }
+
   /* Review Section Style */
   .review-section .review-frame {
     padding: var(--el-normal);
@@ -281,6 +285,11 @@
     width: var(--ls-full);
   }
 
+  .offers-section .product-frame img {
+    width: 60%;
+    margin: auto;
+  }
+
   /* Review Section Style */
   .review-section .review-frame {
     width: var(--ls-full);
@@ -342,5 +351,13 @@
 
   .sign p.send-btn input {
     padding: var(--el-normal);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /* Product Section Style */
+  .offers-section .product-frame img {
+    height: 180px;
+    margin: auto;
   }
 }

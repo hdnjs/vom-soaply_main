@@ -1,0 +1,33 @@
+.details header {
+  border: 1px solid var(--color-gray-d);
+  background: #fff;
+}
+
+.detail-image {
+  width: 100%;
+  height: auto;
+  background: #ccc;
+}
+
+.detail-text {
+  width: 100%;
+  height: 100px;
+  background: #bbb;
+}
+
+.detail-comments {
+  width: 100%;
+  height: 100px;
+  background: #aaa;
+}
+/* grid 참조: https://studiomeal.com/archives/533 */
+
+.details .detail-wrapper .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.details .detail-wrapper .container > div:nth-child(3) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}

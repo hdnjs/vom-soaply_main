@@ -299,6 +299,7 @@
 .offers-section .product-frame img {
   width: var(--ls-full);
   border-radius: 0.25rem;
+  height: 350px;
 }
 
 .offers-section .product-text {
