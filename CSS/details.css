@@ -1,24 +1,26 @@
 .details header {
   border: 1px solid var(--color-gray-d);
   background: #fff;
+  position: relative;
+}
+
+.details header.active {
+  position: fixed;
 }
 
 .detail-image {
   width: 100%;
   height: auto;
-  background: #ccc;
 }
 
 .detail-text {
   width: 100%;
   height: 100px;
-  background: #bbb;
 }
 
 .detail-comments {
   width: 100%;
   height: 100px;
-  background: #aaa;
 }
 /* grid 참조: https://studiomeal.com/archives/533 */
 
@@ -30,4 +32,133 @@
 .details .detail-wrapper .container > div:nth-child(3) {
   grid-column-start: 1;
   grid-column-end: 3;
+}
+
+/* Detail Page Image Section Style */
+.details .detail-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  overflow: hidden;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.details .detail-image img {
+  width: 100%;
+}
+
+/* Detail Page Product Information Style */
+.line {
+  width: 100%;
+  height: 1px;
+  background: var(--color-gray-d);
+  display: block;
+  margin: var(--el-medium) 0;
+}
+
+em,
+strong {
+  font-style: normal;
+  font-weight: var(--fw-400);
+}
+
+.details .detail-text {
+  width: 100%;
+  height: auto;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.details .detail-text > p {
+  color: var(--color-gray-5);
+  font-size: var(--fs-14);
+}
+
+.details .detail-text h2 {
+  font-size: var(--fs-title);
+  font-weight: var(--fw-400);
+  margin-bottom: var(--el-normal);
+}
+
+.details .price {
+  display: flex;
+  align-items: center;
+}
+
+.details .price p {
+  color: var(--color-gray-5);
+}
+
+.details .price .price-value {
+  margin-left: 2rem;
+}
+
+.details .price .price-value p:nth-child(1) {
+  font-size: var(--fs-20);
+  font-weight: var(--fw-600);
+}
+
+.details .qnt-sum {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details .qnt-sum .qnts {
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: center;
+}
+
+.details .qnt-sum .qnts button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-black);
+  color: #fff;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.25rem;
+}
+
+.details .detail-btns {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: end;
+  column-gap: 0.25rem;
+}
+
+.details .detail-comments {
+  width: 100%;
+  padding-top: var(--el-section);
+}
+
+.details .comment-info {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  column-gap: 0.25rem;
+  padding: var(--el-small) 0;
+  position: relative;
+}
+
+.details .comment-info::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: var(--color-gray-d);
+  left: 0;
+  bottom: 0;
+}
+
+.details .comment-info em {
+  font-size: var(--fs-14);
+  margin-left: 0.25rem;
 }
