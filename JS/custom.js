@@ -2,7 +2,7 @@
 const productsBox = document.querySelector(".products");
 
 const getData = async () => {
-  await fetch("/main_backend/model/get_products.php")
+  await fetch("/main_backend/model/get_products.php?qnt=6")
     .then((response) => response.json())
     .then((data) => {
       let dataEl;

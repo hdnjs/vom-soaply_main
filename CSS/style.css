@@ -387,17 +387,37 @@
   width: var(--ls-full);
   height: auto;
   max-height: 1000px;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .gallery-section .grid-item {
   width: var(--ls-1-3);
   padding: var(--el-small);
+  position: relative;
 }
 
 .gallery-section .grid-item img {
   width: var(--ls-full);
   border-radius: 0.25rem;
+}
+
+.gallery-section .grid-item .overlay {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.gallery-section .grid-item:hover .overlay {
+  opacity: 1;
 }
 
 /* ========== Insta Style_self ========== */

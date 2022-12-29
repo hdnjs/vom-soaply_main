@@ -1,5 +1,7 @@
 window.addEventListener("load", function () {
   const url = document.location.href;
+  const cmtInputBox = document.querySelector("textarea");
+  const cmtBtn = document.querySelector("button[type=submit]");
   // split 메소드 참조: https://hianna.tistory.com/377
   const urlIndex = Number(url.split("=")[1]);
 
@@ -10,7 +12,7 @@ window.addEventListener("load", function () {
     await fetch(`/main_backend/model/get_details.php?idx=${urlIndex}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         let imageEl;
         let textEl;
 

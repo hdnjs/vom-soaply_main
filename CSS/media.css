@@ -383,6 +383,15 @@
     width: 80%;
     margin: 0 auto var(--el-medium);
   }
+
+  /* Detail Comment Style */
+  .details .comment-form textarea {
+    width: 75%;
+  }
+
+  .details .comment-form button {
+    width: 25%;
+  }
 }
 
 @media screen and (max-width: 400px) {

@@ -80,12 +80,36 @@
               <em>2 Comments</em>
             </div>
             <div class="comment-form">
-              <form>
+              <form onsubmit="return false;">
                 <textarea placeholder="상품명을 입력해 주세요."></textarea>
-                <button type="button">입력</button>
+                <button type="submit">입력</button>
               </form>
             </div>
-            <div class="comment-lists"></div>
+            <div class="comment-lists">
+              <div class="list-info">
+                <p>abcd |</p>
+                <em>2022-12-31 19:00:00</em>
+              </div>
+              <div class="list-content">
+                <p>
+                  제품이 좋습니다. 배송이 빠릅니다. 제품이 좋습니다. 배송이
+                  빠릅니다. 제품이 좋습니다. 배송이 빠릅니다. 제품이 좋습니다.
+                  배송이 빠릅니다.
+                </p>
+              </div>
+            </div>
+            <!-- End of loop comment list -->
+
+            <div class="comment-lists">
+              <div class="list-info">
+                <p>abcd |</p>
+                <em>2022-12-30 10:00:00</em>
+              </div>
+              <div class="list-content">
+                <p>제품이 나쁩니다. 배송이 빠릅니다.</p>
+              </div>
+            </div>
+            <!-- End of loop comment list -->
           </div>
         </div>
       </section>
@@ -106,5 +130,6 @@
     <script src="/main_project/JS/fixedHeader.js"></script>
     <script src="/main_project/JS/loginResponse.js"></script>
     <script src="/main_project/JS/requestDetails.js"></script>
+    <script src="/main_project/JS/requestCmt.js"></script>
   </body>
 </html>

@@ -89,6 +89,12 @@ button {
   border-radius: 0;
 }
 
+em,
+strong {
+  font-style: normal;
+  font-weight: var(--fw-400);
+}
+
 /* ========== Common Style ========== */
 .wrapper {
   width: var(--ls-full);
