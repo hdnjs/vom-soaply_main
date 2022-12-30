@@ -8,7 +8,7 @@ window.addEventListener("load", function () {
       return res.json();
     })
     .then((data) => {
-      console.log(data.userid);
+      console.log(data.userid, data.user_idx);
 
       if (data.userid === "guest") {
         adminIcon.forEach((item) => {
@@ -41,7 +41,8 @@ window.addEventListener("load", function () {
       const signoutBtn = document.querySelector(".signout a");
 
       if (signoutBtn) {
-        signoutBtn.addEventListener("click", () => {
+        signoutBtn.addEventListener("click", (e) => {
+          e.preventDefault();
           this.fetch("/main_backend/model/register.php?q=signout")
             .then((res) => res.json())
             .then((data) => {

@@ -16,7 +16,7 @@ $(function () {
     let items = [];
     $.each(data, function (i, item) {
       //   console.log(i);
-      console.log(item);
+      // console.log(item);
 
       const galleryItems = `
         <div class="grid-item">
