@@ -229,3 +229,11 @@ strong {
   font-size: var(--fs-14);
   color: var(--color-gray-5);
 }
+
+.no-list {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: var(--fs-14);
+  padding: var(--el-medium) 0;
+}

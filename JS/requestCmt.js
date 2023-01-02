@@ -37,3 +37,61 @@ cmtBtn.addEventListener("click", () => {
       console.log(err);
     });
 });
+
+const cmtWrapper = document.querySelector(".comment-wrapper");
+const listCount = document.querySelector(".comment-info strong");
+
+// Get Comments
+const getCmtLists = async () => {
+  await fetch(
+    `/main_backend/model/cmt_ctrl.php?p_idx=${urlIndex}&req_sign=get_cmt`
+  )
+    .then((res) => res.json())
+    .then((lists) => {
+      // console.log(lists);
+      if (lists.msg) {
+        cmtWrapper.innerHTML = `<p class="no-list">${lists.msg}</p>`;
+        return;
+      }
+
+      listCount.textContent = lists.length;
+      let listsElmt;
+      lists.map((list) => {
+        if (list.user_id === list.session_id) {
+          listsElmt = `
+            <form onsubmit="return false;">
+              <div class="comment-lists">
+                <div class="list-info">
+                  <p>${list.user_id} |</p>
+                  <em>${list.cmt_reg} | </em>
+                  <button type="submit" class="cmt-update">수정하기</button>
+                </div>
+                <div class="list-content">
+                  <p>${list.cmt_cont}</p>
+                </div>
+              </div>
+            </form>
+          `;
+        } else {
+          listsElmt = `<div class="comment-lists">
+            <div class="list-info">
+              <p>${list.user_id} |</p>
+              <em>${list.cmt_reg}</em>
+            </div>
+            <div class="list-content">
+              <p>
+              ${list.cmt_cont}
+              </p>
+            </div>
+          </div>`;
+        }
+
+        cmtWrapper.innerHTML += listsElmt;
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
+getCmtLists();
