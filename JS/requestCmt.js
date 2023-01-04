@@ -116,7 +116,7 @@ getCmtLists();
 
 // 수정하기 기능 함수 선언
 function updateCmt(cmtObjs) {
-  console.log(cmtObjs);
+  // console.log(cmtObjs);
   const cmtUpBtns = document.querySelectorAll("button.cmt-update");
   // console.log(cmtUpBtns);
 
