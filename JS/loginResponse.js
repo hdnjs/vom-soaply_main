@@ -9,11 +9,11 @@ window.addEventListener("load", function () {
       return res.json();
     })
     .then((data) => {
-      // console.log(data.userid, data.user_idx);
+      console.log(data.userid, data.user_idx, data.cart_count);
       cart.innerHTML = `
-        <a href="#">
+        <a href="/main_project/pages/cart.html">
           <i class="ri-shopping-cart-line"></i>
-          <em>(5)</em>
+          <em>(${data.cart_count})</em>
         </a>
       `;
 
