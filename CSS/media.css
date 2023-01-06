@@ -245,6 +245,27 @@
   .sign .sign-box {
     width: 75vw;
   }
+
+  /* Cart List Style */
+  .cart-list {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.5rem;
+  }
+  .cart-list div.cart-btns {
+    flex-direction: row;
+    justify-content: flex-end;
+    column-gap: 0.5rem;
+  }
+
+  .cart-list .cart-text h2 {
+    font-size: var(--fs-20);
+  }
+  .cart-list .cart-text p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -391,6 +412,15 @@
 
   .details .comment-form button {
     width: 25%;
+  }
+
+  /* Cart List Style */
+  .cart-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .cart-list div.cart-btns {
+    justify-content: center;
   }
 }
 

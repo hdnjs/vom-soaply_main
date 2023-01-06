@@ -6,6 +6,11 @@ const getCartLists = async () => {
 
       const cartWrapper = document.querySelector(".cart-lists-wrapper");
 
+      if (cartData.length === 0) {
+        cartWrapper.innerHTML = `<p class="no-cart">카트에 상품이 없습니다.</p>`;
+        return;
+      }
+
       cartData.map((list) => {
         console.log(list);
 
@@ -13,7 +18,9 @@ const getCartLists = async () => {
         <div class="cart-list">
             <div class="cart-frame">
               <div class="cart-image">
-                <img src="/main_project/images/products/${list.cart_img}" alt="" />
+                <img src="/main_project/images/products/${
+                  list.cart_img
+                }" alt="" />
               </div>
             </div>
 
@@ -32,12 +39,16 @@ const getCartLists = async () => {
               </div>
               <div class="sum">
                 합계:
-                <em>${list.cart_price}</em>원
+                <em>${list.cart_price
+                  .toString()
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</em>원
               </div>
             </div>
 
             <div class="cart-btns">
-              <button class="common-btn remove-cart" id="btn-${list.cart_idx}">상품삭제</button>
+              <button class="common-btn remove-cart" id="btn-${
+                list.cart_idx
+              }">상품삭제</button>
               <button class="common-btn">바로구매</button>
             </div>
         </div>
@@ -51,6 +62,20 @@ const getCartLists = async () => {
         btn.addEventListener("click", function () {
           console.log(this);
           const cartIdx = Number(this.getAttribute("id").split("-")[1]);
+
+          fetch(
+            `/main_backend/model/cart_ctrl.php?req_cart=del_cart&cart_idx=${cartIdx}`
+          )
+            .then((res) => res.json())
+            .then((del) => {
+              // console.log(del);
+              alert(del.msg);
+              location.reload();
+            })
+            .catcn((err) => {
+              console.log(err);
+            });
+
           console.log(cartIdx);
         });
       });

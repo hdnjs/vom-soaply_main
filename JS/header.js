@@ -9,6 +9,7 @@ window.addEventListener("load", function () {
 
   /* ========== Mobile Menu Toggle ========== */
   const mobileBtn = document.querySelector(".mobile-btn");
+  console.log(mobileBtn);
 
   toggleMobileBtn = (e) => {
     const target = e.currentTarget;

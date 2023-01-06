@@ -2,7 +2,7 @@ window.addEventListener("load", function () {
   const userIcon = document.querySelectorAll(".user");
   // console.log(userIcon); => 2개 배열 요소
   const adminIcon = document.querySelectorAll(".admin");
-  const cart = document.querySelector(".cart");
+  const cart = document.querySelectorAll(".cart");
 
   this.fetch("/main_backend/etc/check_sign.php")
     .then((res) => {
@@ -10,7 +10,8 @@ window.addEventListener("load", function () {
     })
     .then((data) => {
       console.log(data.userid, data.user_idx, data.cart_count);
-      cart.innerHTML = `
+
+      const cartItemEl = `
         <a href="/main_project/pages/cart.html">
           <i class="ri-shopping-cart-line"></i>
           <em>(${data.cart_count})</em>
@@ -31,6 +32,9 @@ window.addEventListener("load", function () {
         //   userIcon.innerHTML = `<a href="/main_project/pages/sign-in.html">
         //   <i class="ri-user-3-fill"></i>
         // </a>`;
+        cart.forEach((item) => {
+          item.innerHTML = cartItemEl;
+        });
       } else {
         adminIcon.forEach((item) => {
           item.style.display = "flex";
@@ -43,6 +47,10 @@ window.addEventListener("load", function () {
         //   userIcon.innerHTML = `<a href="/main_project/pages/sign-in.html">
         //   <i class="ri-user-3-fill"></i>
         // </a>`;
+
+        cart.forEach((item) => {
+          item.innerHTML = cartItemEl;
+        });
       }
 
       const signoutBtn = document.querySelector(".signout a");
