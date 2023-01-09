@@ -1,0 +1,30 @@
+.shop,
+.gallery {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  border-bottom: 1px solid var(--color-gray-d);
+  position: relative;
+}
+
+.shop .product-text,
+.gallery .product-text {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.shop .product-text .section-title,
+.gallery .product-text .section-title {
+  font-size: var(--fs-title);
+}
+
+.load-more {
+  width: 100%;
+  height: auto;
+  padding: var(--el-medium) 0;
+  text-align: center;
+  border-top: 1px solid var(--color-gray-d);
+}

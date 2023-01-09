@@ -46,7 +46,8 @@ $(function () {
   $.getJSON("/main_backend/model/get_products.php?qnt=9", getGalleryData);
 
   // Navigation Moving to Target Section
-  $(".nav-lists li").on("click", function () {
+  $(".nav-lists li").on("click", function (e) {
+    e.preventDefault(); //  a에 적용된 기능 제거
     const targetIdx = $(this).index();
     // console.log(targetIdx);
     const pagePosition = $(".nav-target").eq(targetIdx).offset().top;
