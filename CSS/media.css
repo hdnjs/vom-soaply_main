@@ -334,7 +334,7 @@
   }
 
   /* Gallery Section Style */
-  .gallery-section .grid-item {
+  .grid-item {
     width: var(--ls-1-2);
     padding: 0.25rem;
   }

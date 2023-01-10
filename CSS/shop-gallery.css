@@ -4,9 +4,15 @@
   height: auto;
 }
 
-header {
+.shop header,
+.gallery header {
   border-bottom: 1px solid var(--color-gray-d);
   position: relative;
+}
+
+.shop header.active,
+.gallery header.active {
+  position: fixed;
 }
 
 .shop .product-text,
@@ -19,6 +25,21 @@ header {
 .shop .product-text .section-title,
 .gallery .product-text .section-title {
   font-size: var(--fs-title);
+}
+
+.shop .product-frame {
+  animation: scale 0.3s 1;
+  animation-fill-mode: forwards;
+  transform: scale(0);
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 .load-more {
