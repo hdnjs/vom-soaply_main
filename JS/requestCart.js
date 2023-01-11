@@ -5,8 +5,9 @@ const getCartLists = async () => {
       console.log(cartData);
 
       const cartWrapper = document.querySelector(".cart-lists-wrapper");
+      // console.log(cartWrapper);
 
-      if (cartData.length === 0) {
+      if (!cartData) {
         cartWrapper.innerHTML = `<p class="no-cart">카트에 상품이 없습니다.</p>`;
         return;
       }

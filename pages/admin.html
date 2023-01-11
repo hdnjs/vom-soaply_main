@@ -40,61 +40,124 @@
           <div class="admin-panels">
             <form onsubmit="return false;">
               <div class="product-panel panel">
-                <div class="product-info">
-                  <div class="product-text">
-                    <div class="product-name">
-                      <strong>제품명</strong>
+                <div class="product-panel-wrapper">
+                  <div class="product-info">
+                    <div class="product-text">
+                      <div class="product-name">
+                        <strong>제품명</strong>
+                        <input
+                          type="text"
+                          placeholder="제품명을 입력해주세요."
+                          name="product_name"
+                        />
+                      </div>
+
+                      <div class="product-price">
+                        <strong>가격</strong>
+                        <input
+                          type="text"
+                          placeholder="가격을 입력해주세요."
+                          name="product_price"
+                        />
+                      </div>
+                    </div>
+                    <!-- End of product text -->
+
+                    <div class="product-desc">
+                      <textarea
+                        placeholder="제품 정보를 입력해주세요."
+                        name="product_desc"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <!-- End of product info -->
+
+                  <div class="product-image">
+                    <div class="input-control">
+                      <input placeholder="파일명" class="image-name" />
+                      <label for="main-image">SELECT IMAGE</label>
                       <input
-                        type="text"
-                        placeholder="제품명을 입력해주세요."
-                        name="product_name"
+                        type="file"
+                        id="main-image"
+                        class="upload-hidden"
+                        name="img_main"
                       />
                     </div>
 
-                    <div class="product-price">
-                      <strong>가격</strong>
-                      <input
-                        type="text"
-                        placeholder="가격을 입력해주세요."
-                        name="product_price"
-                      />
+                    <div class="img-selected">
+                      <img id="img" />
                     </div>
-                  </div>
-                  <!-- End of product text -->
-
-                  <div class="product-desc">
-                    <textarea
-                      placeholder="제품 정보를 입력해주세요."
-                      name="product_desc"
-                    ></textarea>
-                  </div>
-                </div>
-                <!-- End of product info -->
-
-                <div class="product-image">
-                  <div class="input-control">
-                    <input placeholder="파일명" class="image-name" />
-                    <label for="main-image">SELECT IMAGE</label>
-                    <input
-                      type="file"
-                      id="main-image"
-                      class="upload-hidden"
-                      name="img_main"
-                    />
-                  </div>
-
-                  <div class="img-selected">
-                    <img id="img" />
                   </div>
                 </div>
                 <!-- End of product image -->
+                <div class="submit">
+                  <input type="submit" value="입력하기" class="common-btn" />
+                </div>
               </div>
               <!-- End of Product Panel -->
-              <div class="submit">
-                <input type="submit" value="입력하기" class="common-btn" />
-              </div>
             </form>
-            <div class="user-panel panel"></div>
+            <div class="user-panel panel">
+              <div class="user-table">
+                <ul class="user-lists">
+                  <li class="column-name">
+                    <span class="num">번호</span>
+                    <span class="id">아이디</span>
+                    <span class="name">이름</span>
+                    <span class="lvl">레벨</span>
+                    <span class="updt">수정</span>
+                    <span class="del">삭제</span>
+                  </li>
+                  <li>
+                    <form onsubmit="return false;">
+                      <span class="num">1</span>
+                      <span class="id">marshall</span>
+                      <span class="name">한창호</span>
+                      <span class="lvl">
+                        <input type="text" value="9" />
+                      </span>
+                      <span class="updt">
+                        <button type="submit">수정</button>
+                      </span>
+                      <span class="del">
+                        <button type="submit">삭제</button>
+                      </span>
+                    </form>
+                  </li>
+                  <li>
+                    <form onsubmit="return false;">
+                      <span class="num">1</span>
+                      <span class="id">marshall</span>
+                      <span class="name">한창호</span>
+                      <span class="lvl">
+                        <input type="text" value="9" />
+                      </span>
+                      <span class="updt">
+                        <button type="submit">수정</button>
+                      </span>
+                      <span class="del">
+                        <button type="submit">삭제</button>
+                      </span>
+                    </form>
+                  </li>
+                  <li>
+                    <form onsubmit="return false;">
+                      <span class="num">1</span>
+                      <span class="id">marshall</span>
+                      <span class="name">한창호</span>
+                      <span class="lvl">
+                        <input type="text" value="9" />
+                      </span>
+                      <span class="updt">
+                        <button type="submit">수정</button>
+                      </span>
+                      <span class="del">
+                        <button type="submit">삭제</button>
+                      </span>
+                    </form>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -125,5 +188,6 @@
     <script src="/main_project/JS/admin.js"></script>
     <script src="/main_project/JS/loginResponse.js"></script>
     <script src="/main_project/JS/productUpload.js"></script>
+    <script src="/main_project/JS/requestUser.js"></script>
   </body>
 </html>

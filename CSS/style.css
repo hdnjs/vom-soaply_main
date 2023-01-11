@@ -390,6 +390,10 @@
   overflow: auto;
 }
 
+.grid-sizer {
+  width: var(--ls-1-3);
+}
+
 .grid-item {
   width: var(--ls-1-3);
   padding: var(--el-small);
