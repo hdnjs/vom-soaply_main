@@ -62,7 +62,7 @@
   flex-direction: column;
 }
 
-.admin-wrapper .panel:nth-child(1) {
+.admin-wrapper .panel:nth-child(2) {
   display: none;
 }
 
