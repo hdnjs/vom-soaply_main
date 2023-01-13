@@ -86,6 +86,40 @@
                   placeholder="상품평을 입력해 주세요."
                   name="cmt_cont"
                 ></textarea>
+                <div class="rating">
+                  <p>별점을 평가해주세요.</p>
+                  <div class="stars">
+                    <input type="radio" name="cmt_star" id="star-1" value="5" />
+                    <label for="star-1">
+                      <i class="ri-star-line"></i>
+                      <i class="ri-star-fill"></i>
+                    </label>
+
+                    <input type="radio" name="cmt_star" id="star-2" value="4" />
+                    <label for="star-2">
+                      <i class="ri-star-line"></i>
+                      <i class="ri-star-fill"></i>
+                    </label>
+
+                    <input type="radio" name="cmt_star" id="star-3" value="3" />
+                    <label for="star-3">
+                      <i class="ri-star-line"></i>
+                      <i class="ri-star-fill"></i>
+                    </label>
+
+                    <input type="radio" name="cmt_star" id="star-4" value="2" />
+                    <label for="star-4">
+                      <i class="ri-star-line"></i>
+                      <i class="ri-star-fill"></i>
+                    </label>
+
+                    <input type="radio" name="cmt_star" id="star-5" value="1" />
+                    <label for="star-5">
+                      <i class="ri-star-line"></i>
+                      <i class="ri-star-fill"></i>
+                    </label>
+                  </div>
+                </div>
                 <button type="submit">입력</button>
               </form>
             </div>
@@ -117,13 +151,13 @@
 
     <!-- Include Files -->
     <script src="https://www.w3schools.com/lib/w3.js" defer></script>
-    <script src="/main_project/JS/include.js" defer></script>
+    <script src="/main_project/JS/interface/include.js" defer></script>
 
     <!-- Main Javascript -->
-    <script src="/main_project/JS/header.js" defer></script>
-    <script src="/main_project/JS/fixedHeader.js"></script>
-    <script src="/main_project/JS/loginResponse.js"></script>
-    <script src="/main_project/JS/requestDetails.js"></script>
-    <script src="/main_project/JS/requestCmt.js"></script>
+    <script src="/main_project/JS/interface/header.js" defer></script>
+    <script src="/main_project/JS/interface/fixedHeader.js"></script>
+    <script src="/main_project/JS/etc/loginResponse.js"></script>
+    <script src="/main_project/JS/request/requestDetails.js"></script>
+    <script src="/main_project/JS/request/requestCmt.js"></script>
   </body>
 </html>
