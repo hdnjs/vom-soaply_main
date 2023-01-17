@@ -181,16 +181,56 @@ function updateCmt(cmtObjs) {
         const thisIdx = changeInput.getAttribute("id").split("-")[1];
         console.log(thisIdx);
         // console.log(changeInput);
-        console.log(cmtObjs[0].cmt_cont);
+        // console.log(cmtObjs[0].cmt_cont);
 
         this.classList.toggle("active");
         if (btn.classList.contains("active")) {
           this.textContent = "취소하기";
           changeInput.innerHTML = `
-          <form onsubmit="return false;" class="update-form-${thisIdx}">
+          <form onsubmit="return false;" class="update-form-${thisIdx} update-form">
             <input type="text" name="update_cont" value="${cmtObjs[thisIdx].cmt_cont}">
+            <div class="rating">
+              <div class="stars">
+                <input type="radio" name="cmt_star" id="up-star-1" value="" class="val-5" />
+                <label for="up-star-1">
+                  <i class="ri-star-line"></i>
+                  <i class="ri-star-fill"></i>
+                </label>
+
+                <input type="radio" name="cmt_star" id="up-star-2" value="4" class="val-4" />
+                <label for="up-star-2">
+                  <i class="ri-star-line"></i>
+                  <i class="ri-star-fill"></i>
+                </label>
+
+                <input type="radio" name="cmt_star" id="up-star-3" value="3" class="val-3" />
+                <label for="up-star-3">
+                  <i class="ri-star-line"></i>
+                  <i class="ri-star-fill"></i>
+                </label>
+
+                <input type="radio" name="cmt_star" id="up-star-4" value="2" class="val-2" />
+                <label for="up-star-4">
+                  <i class="ri-star-line"></i>
+                  <i class="ri-star-fill"></i>
+                </label>
+
+                <input type="radio" name="cmt_star" id="up-star-5" value="1" class="val-1" />
+                <label for="up-star-5">
+                  <i class="ri-star-line"></i>
+                  <i class="ri-star-fill"></i>
+                </label>
+              </div>
+            </div>
             <button type="submit">수정입력</button>
           </form>`;
+
+          // 기존 입력된 별점 가져오기
+          const upRadioNum = document.querySelector(
+            `.update-form-${thisIdx} input[type="radio"].val-${cmtObjs[thisIdx].rating}`
+          );
+
+          upRadioNum.checked = true;
 
           const udSubmitBtn = document.querySelector(
             `.update-form-${thisIdx} button`
