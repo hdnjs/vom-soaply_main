@@ -307,3 +307,35 @@ strong {
   color: #fff;
   border-radius: 0.25rem;
 }
+
+/* Average stars style */
+.star-avg-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.star-avg-box .ri-line {
+  position: relative;
+  z-index: 5;
+  top: 0;
+  height: 100%;
+}
+.star-avg-box .ri-fill {
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.star-avg-box .ri-line,
+.star-avg-box .ri-fill {
+  display: flex;
+  align-items: center;
+}
+
+.star-avg-val {
+  font-size: var(--fs-14);
+  color: var(--color-gray-5);
+}

@@ -70,13 +70,23 @@ const getCmtLists = async () => {
   )
     .then((res) => res.json())
     .then((lists) => {
-      // console.log(lists);
+      console.log(lists);
       if (lists.msg) {
         cmtWrapper.innerHTML = `<p class="no-list">${lists.msg}</p>`;
         return;
       }
 
-      listCount.textContent = lists.length;
+      listCount.textContent = lists.length; //  입력된 평가글 개수 표시
+
+      const avg = Number(lists[0].avg); //  평균값 숫자로 변환
+      const floatAvg = parseFloat(avg).toFixed(2); //  parseFloat: 실수 표시, toFixed(n): 소수점 n번째 자리까지 표시
+      const starVal = document.querySelector(".star-avg-val");
+      const riFill = document.querySelector(".ri-fill");
+
+      starVal.textContent = floatAvg; //  평균값 표시
+      riFill.style.width = (floatAvg / 5) * 100 + "%";
+      console.log(floatAvg);
+
       let listsElmt;
       lists.map((list, idx) => {
         if (list.user_id === "guest") {
@@ -191,31 +201,31 @@ function updateCmt(cmtObjs) {
             <input type="text" name="update_cont" value="${cmtObjs[thisIdx].cmt_cont}">
             <div class="rating">
               <div class="stars">
-                <input type="radio" name="cmt_star" id="up-star-1" value="" class="val-5" />
+                <input type="radio" name="cmt_star" id="up-star-${thisIdx}-1" value="5" class="val-5" />
                 <label for="up-star-1">
                   <i class="ri-star-line"></i>
                   <i class="ri-star-fill"></i>
                 </label>
 
-                <input type="radio" name="cmt_star" id="up-star-2" value="4" class="val-4" />
+                <input type="radio" name="cmt_star" id="up-star-${thisIdx}-2" value="4" class="val-4" />
                 <label for="up-star-2">
                   <i class="ri-star-line"></i>
                   <i class="ri-star-fill"></i>
                 </label>
 
-                <input type="radio" name="cmt_star" id="up-star-3" value="3" class="val-3" />
+                <input type="radio" name="cmt_star" id="up-star-${thisIdx}-3" value="3" class="val-3" />
                 <label for="up-star-3">
                   <i class="ri-star-line"></i>
                   <i class="ri-star-fill"></i>
                 </label>
 
-                <input type="radio" name="cmt_star" id="up-star-4" value="2" class="val-2" />
+                <input type="radio" name="cmt_star" id="up-star-${thisIdx}-4" value="2" class="val-2" />
                 <label for="up-star-4">
                   <i class="ri-star-line"></i>
                   <i class="ri-star-fill"></i>
                 </label>
 
-                <input type="radio" name="cmt_star" id="up-star-5" value="1" class="val-1" />
+                <input type="radio" name="cmt_star" id="up-star-${thisIdx}-5" value="1" class="val-1" />
                 <label for="up-star-5">
                   <i class="ri-star-line"></i>
                   <i class="ri-star-fill"></i>
