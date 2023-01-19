@@ -70,7 +70,6 @@ const getCmtLists = async () => {
   )
     .then((res) => res.json())
     .then((lists) => {
-      console.log(lists);
       if (lists.msg) {
         cmtWrapper.innerHTML = `<p class="no-list">${lists.msg}</p>`;
         return;
@@ -85,7 +84,6 @@ const getCmtLists = async () => {
 
       starVal.textContent = floatAvg; //  평균값 표시
       riFill.style.width = (floatAvg / 5) * 100 + "%";
-      console.log(floatAvg);
 
       let listsElmt;
       lists.map((list, idx) => {
@@ -150,19 +148,13 @@ getCmtLists();
 
 //  별점 출력 함수 선언
 function getRating(star) {
-  // console.log(star);
   let starArr = [];
   const starLists = document.querySelectorAll(".star-lists");
   star.forEach((num) => {
-    // console.log(num.rating);
-
     starArr.push(num.rating);
   });
 
-  // console.log(starArr);
-
   starLists.forEach((elm, i) => {
-    // console.log(starArr[i]);
     const negativeNo = 5 - starArr[i];
 
     for (let j = 0; j < starArr[i]; j++) {
@@ -177,56 +169,60 @@ function getRating(star) {
 
 // 수정하기 기능 함수 선언
 function updateCmt(cmtObjs) {
-  // console.log(cmtObjs);
   const cmtUpBtns = document.querySelectorAll("button.cmt-update");
-  // console.log(cmtUpBtns);
 
   if (cmtObjs.length !== 0 && cmtUpBtns) {
     cmtUpBtns.forEach((btn) => {
-      // console.log(btn);
       btn.addEventListener("click", function () {
-        // console.log(this);
         // 노드 추적은 공백을 포함한다.
-        const changeInput = this.parentNode.nextSibling.nextSibling;
-        const thisIdx = changeInput.getAttribute("id").split("-")[1];
-        console.log(thisIdx);
-        // console.log(changeInput);
-        // console.log(cmtObjs[0].cmt_cont);
 
-        this.classList.toggle("active");
-        if (btn.classList.contains("active")) {
-          this.textContent = "취소하기";
-          changeInput.innerHTML = `
+        const itemClass = this.className;
+
+        cmtUpBtns.forEach((aBtn) => {
+          aBtn.classList.remove("active");
+        });
+
+        if (itemClass == "cmt-update") {
+          this.classList.add("active");
+        }
+
+        cmtUpBtns.forEach((bBtn, idx) => {
+          const changeInput = cmtUpBtns[idx].parentNode.nextSibling.nextSibling;
+          const thisIdx = changeInput.getAttribute("id").split("-")[1];
+
+          if (bBtn.classList.contains("active")) {
+            cmtUpBtns[idx].textContent = "취소하기";
+            changeInput.innerHTML = `
           <form onsubmit="return false;" class="update-form-${thisIdx} update-form">
             <input type="text" name="update_cont" value="${cmtObjs[thisIdx].cmt_cont}">
             <div class="rating">
               <div class="stars">
                 <input type="radio" name="cmt_star" id="up-star-${thisIdx}-1" value="5" class="val-5" />
-                <label for="up-star-1">
+                <label for="up-star-${thisIdx}-1">
                   <i class="ri-star-line"></i>
                   <i class="ri-star-fill"></i>
                 </label>
 
                 <input type="radio" name="cmt_star" id="up-star-${thisIdx}-2" value="4" class="val-4" />
-                <label for="up-star-2">
+                <label for="up-star-${thisIdx}-2">
                   <i class="ri-star-line"></i>
                   <i class="ri-star-fill"></i>
                 </label>
 
                 <input type="radio" name="cmt_star" id="up-star-${thisIdx}-3" value="3" class="val-3" />
-                <label for="up-star-3">
+                <label for="up-star-${thisIdx}-3">
                   <i class="ri-star-line"></i>
                   <i class="ri-star-fill"></i>
                 </label>
 
                 <input type="radio" name="cmt_star" id="up-star-${thisIdx}-4" value="2" class="val-2" />
-                <label for="up-star-4">
+                <label for="up-star-${thisIdx}-4">
                   <i class="ri-star-line"></i>
                   <i class="ri-star-fill"></i>
                 </label>
 
                 <input type="radio" name="cmt_star" id="up-star-${thisIdx}-5" value="1" class="val-1" />
-                <label for="up-star-5">
+                <label for="up-star-${thisIdx}-5">
                   <i class="ri-star-line"></i>
                   <i class="ri-star-fill"></i>
                 </label>
@@ -235,47 +231,48 @@ function updateCmt(cmtObjs) {
             <button type="submit">수정입력</button>
           </form>`;
 
-          // 기존 입력된 별점 가져오기
-          const upRadioNum = document.querySelector(
-            `.update-form-${thisIdx} input[type="radio"].val-${cmtObjs[thisIdx].rating}`
-          );
-
-          upRadioNum.checked = true;
-
-          const udSubmitBtn = document.querySelector(
-            `.update-form-${thisIdx} button`
-          );
-
-          udSubmitBtn.addEventListener("click", function () {
-            const formData = new FormData(
-              document.querySelector(`.update-form-${thisIdx}`)
+            // 기존 입력된 별점 가져오기
+            const upRadioNum = document.querySelector(
+              `.update-form-${thisIdx} input[type="radio"].val-${cmtObjs[thisIdx].rating}`
             );
-            fetch(
-              `/main_backend/model/cmt_ctrl.php?cmt_idx=${cmtObjs[thisIdx].cmt_idx}&req_sign=patch_cmt`,
-              {
-                method: "PATCH",
-                body: formData,
-              }
-            )
-              .then((res) => {
-                // console.log(res);
-                // status = res.status;
-                return res.json();
-              })
-              .then((resData) => {
-                alert(resData.msg);
-                location.reload();
-                // console.log(resData);
-              })
-              .catch((err) => {
-                console.log(err);
-              });
-          });
-        } else {
-          this.textContent = "수정하기";
-          changeInput.innerHTML = `
+
+            upRadioNum.checked = true;
+
+            const udSubmitBtn = document.querySelector(
+              `.update-form-${thisIdx} button`
+            );
+
+            udSubmitBtn.addEventListener("click", function () {
+              const formData = new FormData(
+                document.querySelector(`.update-form-${thisIdx}`)
+              );
+              fetch(
+                `/main_backend/model/cmt_ctrl.php?cmt_idx=${cmtObjs[thisIdx].cmt_idx}&req_sign=patch_cmt`,
+                {
+                  method: "PATCH",
+                  body: formData,
+                }
+              )
+                .then((res) => {
+                  // console.log(res);
+                  // status = res.status;
+                  return res.json();
+                })
+                .then((resData) => {
+                  alert(resData.msg);
+                  location.reload();
+                  // console.log(resData);
+                })
+                .catch((err) => {
+                  console.log(err);
+                });
+            });
+          } else {
+            cmtUpBtns[idx].textContent = "수정하기";
+            changeInput.innerHTML = `
           <p>${cmtObjs[thisIdx].cmt_cont}</p>`;
-        }
+          }
+        });
       });
     });
   } else {

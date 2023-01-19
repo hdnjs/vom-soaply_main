@@ -31,10 +31,7 @@
   <body>
     <div class="wrapper shop">
       <!-- Header Include -->
-      <div
-        class="header-wrapper"
-        w3-include-html="/main_project/include/header.html"
-      ></div>
+      <div id="header-wrapper" class="header-wrapper" role="header"></div>
 
       <section class="shop-box section">
         <div class="product-text">
@@ -51,15 +48,8 @@
       </section>
 
       <!-- Footer Include -->
-      <div
-        class="footer-wrapper"
-        w3-include-html="/main_project/include/footer.html"
-      ></div>
+      <div role="footer" id="footer"></div>
     </div>
-
-    <!-- Include Files -->
-    <script src="https://www.w3schools.com/lib/w3.js"></script>
-    <script src="/main_project/js/interface/include.js"></script>
 
     <!-- jQuery Framework -->
     <script
@@ -67,6 +57,9 @@
       integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
       crossorigin="anonymous"
     ></script>
+
+    <!-- Include Files -->
+    <script src="/main_project/js/interface/include.js"></script>
 
     <!-- Main Javascript -->
     <script src="/main_project/js/interface/header.js"></script>

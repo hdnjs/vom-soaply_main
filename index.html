@@ -36,10 +36,7 @@
   <body>
     <div class="wrapper">
       <!-- Header Include -->
-      <div
-        class="header-wrapper"
-        w3-include-html="/main_project/include/header.html"
-      ></div>
+      <div id="header-wrapper" class="header-wrapper" role="header"></div>
 
       <section id="main-section" class="section landing-section nav-target">
         <img src="/main_project/images/landing-image.jpeg" alt="" />
@@ -267,7 +264,7 @@
       <section class="gallery-section section nav-target">
         <div class="container">
           <div class="title-box">
-            <h2 class="section-title">The Gallery From Clients</h2>
+            <h2 class="section-title">The Gallery</h2>
             <a href="/main_project/pages/gallery.html" class="common-btn"
               >전체 보기</a
             >
@@ -377,15 +374,8 @@
       </section>
 
       <!-- Footer Include -->
-      <div
-        class="footer-wrapper"
-        w3-include-html="/main_project/include/footer.html"
-      ></div>
+      <div role="footer" id="footer"></div>
     </div>
-
-    <!-- Include Files -->
-    <script src="https://www.w3schools.com/lib/w3.js"></script>
-    <script src="/main_project/js/interface/include.js"></script>
 
     <!-- Scroll Reveal Plugin -->
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -399,6 +389,9 @@
       integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
       crossorigin="anonymous"
     ></script>
+
+    <!-- Include Files -->
+    <script src="/main_project/js/interface/include.js"></script>
 
     <!-- Masonry and imagesLoaded Plugins -->
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>

@@ -29,10 +29,7 @@
   <body>
     <div class="wrapper details">
       <!-- Header Include -->
-      <div
-        class="header-wrapper"
-        w3-include-html="/main_project/include/header.html"
-      ></div>
+      <div id="header-wrapper" class="header-wrapper" role="header"></div>
 
       <!-- Detail Box Section -->
       <section class="detail-wrapper section">
@@ -40,44 +37,7 @@
           <div class="detail-image">
             <!-- <img src="/main_project/images/offers-image-1.jpeg" alt="" /> -->
           </div>
-          <div class="detail-text">
-            <!-- <h2>제품 2</h2>
-            <p>
-              레허다와 커애녹이요 애미든바 시욤 서브팅가다 층무리라나지 남찻
-              게허여의. 도슨이가 브뎨고 아안버수한테 이하여 웁님오의 긴살나
-              마로아서 얼뽕아서 사시핼과 무우.
-            </p>
-            <span class="line"></span>
-
-            <div class="price">
-              <div class="price-title">
-                <p>가격:</p>
-                <p>배송비:</p>
-              </div>
-              <div class="price-value">
-                <p>20,000원</p>
-                <p>2,500원 (3만원 이상 구매 시 무료배송)</p>
-              </div>
-            </div>
-
-            <span class="line"></span>
-
-            <div class="qnt-sum">
-              <div class="qnts">
-                <button>-</button>
-                <strong>1</strong>
-                <button>+</button>
-              </div>
-              <div class="sum">합계: <em>30,000</em>원</div>
-            </div>
-
-            <div class="line"></div>
-
-            <div class="detail-btns">
-              <button class="common-btn">장바구니</button>
-              <button class="common-btn">바로구매</button>
-            </div> -->
-          </div>
+          <div class="detail-text"></div>
           <!-- End of detail text -->
           <div class="detail-comments">
             <div class="comment-info">
@@ -150,18 +110,6 @@
             <div class="comment-wrapper">
               <!-- End of loop comment list -->
 
-              <!-- <div class="comment-lists">
-                <div class="list-info">
-                  <p>abcd |</p>
-                  <em>2022-12-30 10:00:00 |</em>
-                  <div class="star-lists">
-                    <i class="ri-star-line"></i>
-                  </div>
-                </div>
-                <div class="list-content">
-                  <p>제품이 나쁩니다. 배송이 빠릅니다.</p>
-                </div>
-              </div> -->
               <!-- End of loop comment list -->
             </div>
           </div>
@@ -169,14 +117,17 @@
       </section>
 
       <!-- Footer Include -->
-      <div
-        class="footer-wrapper"
-        w3-include-html="/main_project/include/footer.html"
-      ></div>
+      <div role="footer" id="footer"></div>
     </div>
 
+    <!-- jQuery Framework -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Include Files -->
-    <script src="https://www.w3schools.com/lib/w3.js" defer></script>
     <script src="/main_project/js/interface/include.js" defer></script>
 
     <!-- Main Javascript -->

@@ -29,10 +29,7 @@
   <body>
     <div class="wrapper cart-wrapper">
       <!-- Header Include -->
-      <div
-        class="header-wrapper"
-        w3-include-html="/main_project/include/header.html"
-      ></div>
+      <div id="header-wrapper" class="header-wrapper" role="header"></div>
 
       <!-- Sign In Form Field Section -->
       <div class="cart-box">
@@ -42,89 +39,23 @@
           </div>
 
           <div class="cart-lists-wrapper">
-            <!-- <p class="no-cart">카트에 상품이 없습니다.</p> -->
-            <!-- start of looping cart list -->
-
-            <!-- <div class="cart-list">
-              <div class="cart-frame">
-                <div class="cart-image">
-                  <img src="/main_project/images/offers-image-1.jpeg" alt="" />
-                </div>
-              </div>
-
-              <div class="cart-text">
-                <h2 class="item-title">제품</h2>
-                <p>
-                  앗꾸어아를 누이빌뻐로 이하에 바다어은도 앴둈이고 녀겐과.
-                  씄증눈부먀커 가힉뷕이, 마압 바러골세융셔엡은 스닸웅갱드억을
-                  든올가혈은 마
-                </p>
-              </div>
-              <div class="cart-price">
-                <div class="qnts">
-                  <button class="down">-</button>
-                  <strong class="count">1</strong>
-                  <button class="up">+</button>
-                </div>
-                <div class="sum">
-                  합계:
-                  <em>30,000</em>원
-                </div>
-              </div>
-              <div class="cart-btns">
-                <button class="common-btn">상품삭제</button>
-                <button class="common-btn">바로구매</button>
-              </div>
-            </div> -->
-            <!-- end of looping cart list -->
-
-            <!-- start of looping cart list -->
-
-            <!-- <div class="cart-list">
-              <div class="cart-frame">
-                <div class="cart-image">
-                  <img src="/main_project/images/offers-image-1.jpeg" alt="" />
-                </div>
-              </div>
-
-              <div class="cart-text">
-                <h2 class="item-title">제품</h2>
-                <p>
-                  앗꾸어아를 누이빌뻐로 이하에 바다어은도 앴둈이고 녀겐과.
-                  씄증눈부먀커 가힉뷕이, 마압 바러골세융셔엡은 스닸웅갱드억을
-                  든올가혈은 마
-                </p>
-              </div>
-              <div class="cart-price">
-                <div class="qnts">
-                  <button class="down">-</button>
-                  <strong class="count">1</strong>
-                  <button class="up">+</button>
-                </div>
-                <div class="sum">
-                  합계:
-                  <em>30,000</em>원
-                </div>
-              </div>
-              <div class="cart-btns">
-                <button class="common-btn">상품삭제</button>
-                <button class="common-btn">바로구매</button>
-              </div>
-            </div> -->
             <!-- end of looping cart list -->
           </div>
         </div>
       </div>
 
       <!-- Footer Include -->
-      <div
-        class="footer-wrapper"
-        w3-include-html="/main_project/include/footer.html"
-      ></div>
+      <div role="footer" id="footer"></div>
     </div>
 
+    <!-- jQuery Framework -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Include Files -->
-    <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="/main_project/js/interface/include.js"></script>
 
     <!-- Main Javascript -->

@@ -34,7 +34,7 @@ window.addEventListener("load", function () {
     await fetch(`/main_backend/model/get_details.php?idx=${urlIndex}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         let imageEl;
         let textEl;
 

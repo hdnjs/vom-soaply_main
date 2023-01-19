@@ -65,5 +65,16 @@ window.addEventListener("load", function () {
     };
 
     mobileBtn.addEventListener("click", toggleMobileBtn);
-  }, 100);
+
+    // 모바일 메뉴 클릭 시 드롭 메뉴 사라짐
+    const navLists = document.querySelectorAll(".nav-lists li");
+
+    navLists.forEach((navBtn) => {
+      navBtn.addEventListener("click", function () {
+        mobileBtn.classList.remove("active");
+        mobileBtn.classList.add("not-active");
+        mobileMenus.style.height = 0;
+      });
+    });
+  }, 300);
 });

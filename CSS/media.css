@@ -201,6 +201,10 @@
     width: 60%;
   }
 
+  .product-text p {
+    display: none;
+  }
+
   /* Slider Section Style */
   .slider-section .slider-nav {
     display: none;
@@ -269,6 +273,14 @@
 }
 
 @media screen and (max-width: 600px) {
+  header .logo a {
+    width: 80px;
+  }
+
+  .mobile-btn {
+    width: 1.6rem;
+  }
+
   .landing-text-box {
     text-align: center;
   }
@@ -319,14 +331,14 @@
   }
 
   /* Product Section Style */
-  .product-frame {
+  /* .product-frame {
     width: var(--ls-full);
   }
 
   .product-frame img {
     width: 60%;
     margin: auto;
-  }
+  } */
 
   /* Review Section Style */
   .review-section .review-frame {
@@ -337,6 +349,10 @@
   .grid-item {
     width: var(--ls-1-2);
     padding: 0.25rem;
+  }
+
+  .grid-sizer {
+    width: var(--ls-1-2);
   }
 
   /* Insta Section Style */
@@ -422,12 +438,105 @@
   .cart-list div.cart-btns {
     justify-content: center;
   }
+
+  /* Detail Page Comments */
+  .details .comment-form form {
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+  .details .comment-form form textarea,
+  .details .comment-form .rating,
+  .details .comment-form button {
+    width: 100%;
+  }
+
+  .details .comment-form .rating {
+    padding: 0.5rem 0;
+  }
+  .details .rating label i {
+    font-size: 1.5rem;
+  }
+
+  .details em {
+    display: none;
+  }
+  .update-form {
+    flex-direction: column;
+    row-gap: 0.25rem;
+  }
+  .update-form input,
+  .details .rating,
+  .update-form button {
+    width: 100%;
+  }
+  .details .rating,
+  .update-form button {
+    padding: 0.5rem 0;
+  }
 }
 
 @media screen and (max-width: 400px) {
+  .container {
+    padding: 0 var(--el-normal);
+  }
+
+  /* Mobile Header Icon */
+  header .info {
+    padding: var(--el-medium) 0;
+  }
+
+  header .info li:not(.admin, .user, .cart) {
+    display: none;
+  }
+
+  /* Text Size */
+  .title-box {
+    padding: var(--el-small);
+  }
+  .section-title {
+    font-size: var(--fs-20);
+  }
+  .product-text {
+    row-gap: var(--el-small);
+  }
+  .product-text h4 {
+    font-size: var(--fs-18);
+  }
+  .shop .product-text .section-title,
+  .gallery .product-text .section-title {
+    font-size: 1.5rem;
+  }
+  .product-text strong {
+    font-size: var(--fs-14);
+  }
+  .common-btn {
+    font-size: var(--fs-12);
+  }
+
+  /* Product section Style */
+  .product-frame {
+    padding: 0.25rem;
+  }
+
+  .product-frame img {
+    height: 150px;
+    margin: auto;
+  }
+
   /* Product Section Style */
   .product-frame img {
     height: 180px;
     margin: auto;
+  }
+
+  /* Shop Page */
+  .shop .product-item {
+    border: 1px solid var(--color-gray-d);
+    padding: 0.25rem;
+  }
+
+  .shop .common-btn,
+  .gallery .comment-btn {
+    width: 100%;
   }
 }

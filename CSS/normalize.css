@@ -87,6 +87,11 @@ button {
   border: 0;
   background: #fff;
   border-radius: 0;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
 }
 
 em,

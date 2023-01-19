@@ -26,15 +26,12 @@ window.addEventListener("load", function () {
     distance: "40px",
   });
 
-  sr.reveal(
-    ".meet-wrapper img, .feature, .product-frame, .review-frame, .grid-item",
-    {
-      duration: 1000,
-      origin: "bottom",
-      distance: "40px",
-      interval: 300,
-    }
-  );
+  sr.reveal(".meet-wrapper img, .feature, .product-frame, .review-frame", {
+    duration: 1000,
+    origin: "bottom",
+    distance: "40px",
+    interval: 300,
+  });
 });
 
 /* ========== Swiper Slider Effect ========== */
