@@ -24,7 +24,6 @@ $(function () {
 
   //   3. 초기 기능함수 작성
   function initGalData(data) {
-    console.log(data);
     allData = data; //  변수 입력 후 함수(getGalleryData) 전달
     getGalleryData(); //  allData 지역 변수를 getGalleryData에서 사용하기 위해 사용될 getGalleryData 함수를 작성하여 연결
 
@@ -39,9 +38,6 @@ $(function () {
     let slicedData = allData.slice(addCount, addCount + initCount);
 
     $.each(slicedData, function (i, item) {
-      //   console.log(i);
-      console.log(item);
-
       const galleryItems = `
         <div class="grid-item">
           <a href="/main_project/pages/details.html?idx=${item.pro_idx}">
@@ -63,7 +59,6 @@ $(function () {
     });
 
     addCount += slicedData.length;
-    console.log(addCount);
 
     if (addCount === allData.length) {
       $(".load-more").hide();

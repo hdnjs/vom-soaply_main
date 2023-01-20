@@ -21,8 +21,6 @@ window.addEventListener("load", function () {
     const links = this.document.querySelectorAll(
       ".home-link, .shop-link, .gal-link"
     );
-    // console.log(links);
-    // console.log(pgadr.includes("shop"));
 
     if (pgadr.includes("index")) {
       links.forEach((item) => {
@@ -46,7 +44,6 @@ window.addEventListener("load", function () {
 
     /* ========== Mobile Menu Toggle ========== */
     const mobileBtn = document.querySelector(".mobile-btn");
-    // console.log(mobileBtn);
 
     toggleMobileBtn = (e) => {
       const target = e.currentTarget;

@@ -5,8 +5,6 @@ window.addEventListener("load", function () {
     await this.fetch("/main_backend/model/user_ctrl.php?req_sign=get_user")
       .then((response) => response.json())
       .then((user) => {
-        // console.log(user);
-
         let userListEl;
 
         user.map((item, i) => {
@@ -40,14 +38,10 @@ window.addEventListener("load", function () {
   getUserLists();
 
   function updateUser(data) {
-    // console.log(data);
-
     const updtBtns = document.querySelectorAll(".updt button");
-    // console.log(updtBtns);
 
     updtBtns.forEach((btn, i) => {
       btn.addEventListener("click", async function () {
-        // console.log(data[i]);
         const formData = new FormData(
           document.querySelector(`.update-form-${i}`)
         );
@@ -61,7 +55,6 @@ window.addEventListener("load", function () {
         )
           .then((res) => res.json())
           .then((updt) => {
-            // console.log(updt);
             alert(updt.msg);
             location.reload();
           })
@@ -82,7 +75,6 @@ window.addEventListener("load", function () {
         )
           .then((res) => res.json())
           .then((del) => {
-            // console.log(del);
             alert(del.msg);
             location.reload();
           })

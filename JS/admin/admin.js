@@ -7,7 +7,6 @@ $(function () {
 
     if (window.FileReader) {
       filename = $(this)[0].files[0].name;
-      // console.log(filename);
     }
 
     $(this).siblings().val(filename);

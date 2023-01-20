@@ -330,16 +330,6 @@
     width: 90%;
   }
 
-  /* Product Section Style */
-  /* .product-frame {
-    width: var(--ls-full);
-  }
-
-  .product-frame img {
-    width: 60%;
-    margin: auto;
-  } */
-
   /* Review Section Style */
   .review-section .review-frame {
     width: var(--ls-full);

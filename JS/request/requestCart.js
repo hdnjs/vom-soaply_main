@@ -2,10 +2,7 @@ const getCartLists = async () => {
   await fetch("/main_backend/model/cart_ctrl.php?req_cart=get_cart")
     .then((res) => res.json())
     .then((cartData) => {
-      console.log(cartData);
-
       const cartWrapper = document.querySelector(".cart-lists-wrapper");
-      // console.log(cartWrapper);
 
       if (!cartData) {
         cartWrapper.innerHTML = `<p class="no-cart">카트에 상품이 없습니다.</p>`;
@@ -13,8 +10,6 @@ const getCartLists = async () => {
       }
 
       cartData.map((list) => {
-        console.log(list);
-
         carListEl = `
         <div class="cart-list">
             <div class="cart-frame">
@@ -69,7 +64,6 @@ const getCartLists = async () => {
           )
             .then((res) => res.json())
             .then((del) => {
-              // console.log(del);
               alert(del.msg);
               location.reload();
             })

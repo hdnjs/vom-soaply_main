@@ -71,7 +71,6 @@ window.addEventListener("load", function () {
               this.fetch("/main_backend/model/register.php?q=signout")
                 .then((res) => res.json())
                 .then((data) => {
-                  console.log(data);
                   this.alert("로그아웃 되었습니다");
                   this.location.reload();
                 })

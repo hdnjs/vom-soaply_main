@@ -18,7 +18,6 @@ window.addEventListener("load", function () {
         let dataEl;
 
         data.map((item) => {
-          // console.log(item);
           dataEl = `
                 <div class="product-frame">
                   <div class="product-item">
@@ -50,7 +49,6 @@ window.addEventListener("load", function () {
 });
 
 function loadMore() {
-  // console.log($(".product-frame"));
   const prfr = $(".product-frame");
   prfr.hide();
   prfr.slice(0, 3).show();

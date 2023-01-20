@@ -11,7 +11,6 @@ window.addEventListener("load", function () {
   // 장바구니 데이터 세션 작성 요청 함수
   const requestCart = () => {
     const adtc = document.querySelector(".add-to-cart"); //  장바구니 버튼
-    // console.log(adtc);
 
     const formData = new FormData(document.querySelector(".cart-form")); //  장바구니 전달 데이터 폼
 
@@ -24,7 +23,6 @@ window.addEventListener("load", function () {
         .then((cart) => {
           this.alert(cart.msg);
           this.location.reload();
-          // console.log(cart);
         })
         .catch((err) => console.log(err));
     });
@@ -34,7 +32,6 @@ window.addEventListener("load", function () {
     await fetch(`/main_backend/model/get_details.php?idx=${urlIndex}`)
       .then((response) => response.json())
       .then((data) => {
-        // console.log(data);
         let imageEl;
         let textEl;
 
