@@ -52,7 +52,7 @@ signup.addEventListener("click", () => {
 
   //    formdata 참조: https://ko.javascript.info/formdata
   const formData = new FormData(document.querySelector("form"));
-  fetch("/main_backend/model/register.php", {
+  fetch("/soaply_backend/model/register.php", {
     method: "POST",
     body: formData,
   })
@@ -63,7 +63,7 @@ signup.addEventListener("click", () => {
     })
     .then((data) => {
       alert(data.msg);
-      location.href = "/main_project/index.html";
+      location.href = "/soaply/index.html";
     })
     .catch((err) => {
       console.log(err);

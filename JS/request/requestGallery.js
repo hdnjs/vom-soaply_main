@@ -20,7 +20,7 @@ $(function () {
   });
 
   //   2. 데이터 요청 후 초기 기능 함수(initGalData) 실행
-  $.getJSON("/main_backend/model/get_products.php?qnt=all", initGalData);
+  $.getJSON("/soaply_backend/model/get_products.php?qnt=all", initGalData);
 
   //   3. 초기 기능함수 작성
   function initGalData(data) {
@@ -40,8 +40,8 @@ $(function () {
     $.each(slicedData, function (i, item) {
       const galleryItems = `
         <div class="grid-item">
-          <a href="/main_project/pages/details.html?idx=${item.pro_idx}">
-            <img src="/main_project/images/products/${item.pro_img}" alt="" />
+          <a href="/soaply/pages/details.html?idx=${item.pro_idx}">
+            <img src="/soaply/images/products/${item.pro_img}" alt="" />
             <span class="overlay">
               <em class="common-btn">제품보기</em>
             </span>
@@ -65,5 +65,5 @@ $(function () {
     }
   };
 
-  //   $.getJSON("/main_backend/model/get_products.php?qnt=9", getGalleryData);
+  //   $.getJSON("/soaply_backend/model/get_products.php?qnt=9", getGalleryData);
 });

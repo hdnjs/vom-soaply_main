@@ -1,6 +1,6 @@
 window.addEventListener("load", function () {
   async function checkSign() {
-    await this.fetch("/main_backend/etc/check_sign.php")
+    await this.fetch("/soaply_backend/etc/check_sign.php")
       .then((res) => {
         return res.json();
       })
@@ -12,7 +12,7 @@ window.addEventListener("load", function () {
         const cart = document.querySelectorAll(".cart");
 
         const cartItemEl = `
-        <a href="/main_project/pages/cart.html">
+        <a href="/soaply/pages/cart.html">
           <i class="ri-shopping-cart-line"></i>
           <em>(${data.cart_count})</em>
         </a>
@@ -25,7 +25,7 @@ window.addEventListener("load", function () {
           }); //  어드민 가려줌
 
           userIcon.forEach((item) => {
-            item.innerHTML = `<a href="/main_project/pages/sign-in.html">
+            item.innerHTML = `<a href="/soaply/pages/sign-in.html">
           <i class="ri-user-3-fill"></i>
         </a>`;
           }); //  사용자 정보 없는 아이콘
@@ -68,7 +68,7 @@ window.addEventListener("load", function () {
           signoutBtn.forEach((btn) => {
             btn.addEventListener("click", (e) => {
               e.preventDefault();
-              this.fetch("/main_backend/model/register.php?q=signout")
+              this.fetch("/soaply_backend/model/register.php?q=signout")
                 .then((res) => res.json())
                 .then((data) => {
                   this.alert("로그아웃 되었습니다");

@@ -327,8 +327,7 @@
 
 /* ========== Review Style ========== */
 .review-section {
-  background: url(/main_project/images/review-background.jpeg) no-repeat center
-    center;
+  background: url(/soaply/images/review-background.jpeg) no-repeat center center;
   background-size: cover;
 }
 

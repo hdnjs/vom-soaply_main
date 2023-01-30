@@ -2,7 +2,7 @@ window.addEventListener("load", function () {
   const userLists = document.querySelector(".user-lists");
 
   const getUserLists = async () => {
-    await this.fetch("/main_backend/model/user_ctrl.php?req_sign=get_user")
+    await this.fetch("/soaply_backend/model/user_ctrl.php?req_sign=get_user")
       .then((response) => response.json())
       .then((user) => {
         let userListEl;
@@ -47,7 +47,7 @@ window.addEventListener("load", function () {
         );
 
         await fetch(
-          `/main_backend/model/user_ctrl.php?req_sign=patch_user&user_idx=${data[i].user_idx}`,
+          `/soaply_backend/model/user_ctrl.php?req_sign=patch_user&user_idx=${data[i].user_idx}`,
           {
             method: "PATCH",
             body: formData,
@@ -71,7 +71,7 @@ window.addEventListener("load", function () {
     delBtns.forEach((btn, i) => {
       btn.addEventListener("click", async function () {
         await fetch(
-          `/main_backend/model/user_ctrl.php?req_sign=del_user&user_idx=${data[i].user_idx}`
+          `/soaply_backend/model/user_ctrl.php?req_sign=del_user&user_idx=${data[i].user_idx}`
         )
           .then((res) => res.json())
           .then((del) => {

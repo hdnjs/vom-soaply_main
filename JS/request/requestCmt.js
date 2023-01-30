@@ -39,7 +39,7 @@ cmtBtn.addEventListener("click", () => {
   //    formdata 참조: https://ko.javascript.info/formdata
   const formData = new FormData(document.querySelector(".comment-form form"));
   fetch(
-    `/main_backend/model/cmt_ctrl.php?p_idx=${urlIndex}&req_sign=post_cmt`,
+    `/soaply_backend/model/cmt_ctrl.php?p_idx=${urlIndex}&req_sign=post_cmt`,
     {
       method: "POST",
       body: formData,
@@ -66,7 +66,7 @@ const listCount = document.querySelector(".comment-info strong");
 // Get Comments
 const getCmtLists = async () => {
   await fetch(
-    `/main_backend/model/cmt_ctrl.php?p_idx=${urlIndex}&req_sign=get_cmt`
+    `/soaply_backend/model/cmt_ctrl.php?p_idx=${urlIndex}&req_sign=get_cmt`
   )
     .then((res) => res.json())
     .then((lists) => {
@@ -247,7 +247,7 @@ function updateCmt(cmtObjs) {
                 document.querySelector(`.update-form-${thisIdx}`)
               );
               fetch(
-                `/main_backend/model/cmt_ctrl.php?cmt_idx=${cmtObjs[thisIdx].cmt_idx}&req_sign=patch_cmt`,
+                `/soaply_backend/model/cmt_ctrl.php?cmt_idx=${cmtObjs[thisIdx].cmt_idx}&req_sign=patch_cmt`,
                 {
                   method: "PATCH",
                   body: formData,

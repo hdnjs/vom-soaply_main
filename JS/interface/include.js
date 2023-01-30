@@ -1,4 +1,4 @@
 $(function () {
-  $("#header-wrapper").load("/main_project/include/header.html");
-  $("#footer").load("/main_project/include/footer.html");
+  $("#header-wrapper").load("/soaply/include/header.html");
+  $("#footer").load("/soaply/include/footer.html");
 });
