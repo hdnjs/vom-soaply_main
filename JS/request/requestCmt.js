@@ -70,8 +70,13 @@ const getCmtLists = async () => {
   )
     .then((res) => res.json())
     .then((lists) => {
+      const starVal = document.querySelector(".star-avg-val");
+      const riFill = document.querySelector(".ri-fill");
+
       if (lists.msg) {
         cmtWrapper.innerHTML = `<p class="no-list">${lists.msg}</p>`;
+        starVal.textContent = parseFloat(0).toFixed(2);
+        riFill.style.width = 0;
         return;
       }
 
@@ -79,11 +84,9 @@ const getCmtLists = async () => {
 
       const avg = Number(lists[0].avg); //  평균값 숫자로 변환
       const floatAvg = parseFloat(avg).toFixed(2); //  parseFloat: 실수 표시, toFixed(n): 소수점 n번째 자리까지 표시
-      const starVal = document.querySelector(".star-avg-val");
-      const riFill = document.querySelector(".ri-fill");
 
       starVal.textContent = floatAvg; //  평균값 표시
-      riFill.style.width = (floatAvg / 5) * 100 + "%";
+      riFill.style.width = (floatAvg / 5) * 100 - 8 + "%";
 
       let listsElmt;
       lists.map((list, idx) => {

@@ -33,7 +33,7 @@ const getCartLists = async () => {
               </div>
               <div class="sum">
                 합계:
-                <em>${list.cart_price
+                <em>${list.cart_sum
                   .toString()
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</em>원
               </div>
